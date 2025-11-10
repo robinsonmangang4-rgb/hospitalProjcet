@@ -1,0 +1,800 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Robin Care Hospital</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --brand: #7b1f2a;
+            /* maroon like aiims header */
+            --accent: #f2f2f2;
+            --muted: #666;
+            --max-width: 1100px;
+        }
+
+        /* * {
+            box-sizing: border-box
+        } */
+
+        body {
+            font-family: Roboto, system-ui, -apple-system, "Segoe UI", Arial;
+            margin: 0;
+            color: #222;
+            background: #fafafa
+        }
+
+        /* TOP BAR */
+        .topbar {
+            background: #fff;
+            border-bottom: 4px solid #e9e9e9
+        }
+
+        .topbar .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 14px
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .logo img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            border-radius: 6px
+        }
+
+        .brand {
+            line-height: 1
+        }
+
+        .brand h1 {
+            font-family: Merriweather, serif;
+            margin: 0;
+            font-size: 20px;
+            color: var(--brand)
+        }
+
+        .brand p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .top-right {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .search {
+            position: relative
+        }
+
+        .search input {
+            padding: 8px 36px 8px 12px;
+            border-radius: 18px;
+            border: 1px solid #ddd
+        }
+
+        .search button {
+            position: absolute;
+            right: 4px;
+            top: 4px;
+            border: 0;
+            background: var(--brand);
+            color: #fff;
+            padding: 6px 10px;
+            border-radius: 14px;
+            cursor: pointer
+        }
+
+        /* NAV */
+        nav {
+            background: var(--brand);
+            color: #fff
+        }
+
+        nav .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            gap: 16px;
+            padding: 0%;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 12px;
+            display: inline-block;
+            font-weight: 600
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 6px
+        }
+
+        /* HERO */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(#);
+            background-size: cover;
+            background-position: center;
+            color: #fff
+        }
+
+        .hero .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 36px 18px 48px;
+            display: flex;
+            gap: 20px;
+            align-items: center
+        }
+
+        .hero .intro {
+            flex: 1
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-family: Merriweather;
+            font-size: 30px
+        }
+
+        .hero p {
+            margin: 8px 0 18px;
+            color: #fff;
+            opacity: 0.95
+        }
+
+        .btn {
+            background: #fff;
+            color: var(--brand);
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            border: 0;
+            cursor: pointer
+        }
+
+        /* featured strip */
+        .features {
+            max-width: var(--max-width);
+            margin: 18px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            padding: 0 18px
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04)
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block
+        }
+
+        .card .card-body {
+            padding: 12px
+        }
+
+        .card h3 {
+            margin: 0 0 6px;
+            font-size: 18px
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        /* Header Section */
+        .top-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .icon-box {
+            text-align: center;
+            width: 120px;
+        }
+
+        .icon-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /* circuler */
+            overflow-y: hidden;
+
+            background-color: #a1262e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .icon-circle:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .icon-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+
+        }
+
+        .icon-title {
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        /* Ministers Section */
+        .minister-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .minister-section h2 {
+            width: 100%;
+            text-align: center;
+            color: #a1262e;
+            margin-bottom: 20px;
+        }
+
+        .minister-card {
+            text-align: center;
+        }
+
+        .minister-card img {
+            width: 150px;
+            height: 170px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid #ccc;
+        }
+
+        .minister-card p {
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        /* Information + Video */
+        .info-video-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px auto;
+            width: 80%;
+        }
+
+        .info-box,
+        .video-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 12px;
+            width: 45%;
+            min-width: 300px;
+        }
+
+        .info-box h3,
+        .video-box h3 {
+            color: #a1262e;
+            margin-bottom: 10px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-box li {
+            margin: 10px 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 6px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            border: none;
+        }
+
+
+
+        /* ===== Gallery ===== */
+        .gallery {
+            text-align: center;
+            padding: 40px 0;
+            background: #f8f8f8;
+        }
+
+        .gallery h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .gallery-item {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            width: 180px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .gallery-item p {
+            padding: 10px;
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: #202020;
+            color: #ddd;
+            padding: 40px 0 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin: 15px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 18px;
+            border-bottom: 2px solid #f90;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.8;
+            text-decoration: none;
+        }
+
+        .footer-column a:hover {
+            color: #f90;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .bottom-footer {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        .bottom-footer img {
+            width: 120px;
+            margin-bottom: 5px;
+        }
+
+        .bottom-footer p {
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .info-video-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-box,
+            .video-box {
+                width: 90%;
+            }
+
+            .features {
+                grid-template-columns: 1fr
+            }
+
+            .hero .container {
+                flex-direction: column;
+                text-align: center
+            }
+
+            .topbar .container {
+                padding: 10px
+            }
+        }
+
+        footer {
+            background: grgb(58, 53, 53);
+            color: #fff;
+            padding: 28px 18px
+        }
+
+        footer .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px
+        }
+
+        .foot-col {
+            flex: 1;
+            min-width: 200px
+        }
+
+        .small {
+            font-size: 13px;
+            color: #bbb
+        }
+
+        /* small utilities */
+        .appointment {
+            background: var(--brand);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 700
+        }
+
+        .top-links {
+            display: flex;
+            gap: 8px
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="container">
+            <div class="logo">
+                <img src="https://images.unsplash.com/photo-1586306461030-9b7f397e54e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=60"
+                    alt="Robin Care logo">
+                <div class="brand">
+                    <h1>Robin Care Hospital</h1>
+                    <p>Comprehensive Healthcare — Compassion & Excellence</p>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="top-links small">
+                    <span>OPD Appointment</span> • <span>Dashboard</span>
+                </div>
+                <div class="search">
+                    <input type="search" placeholder="Search..." aria-label="Search site">
+                    <button aria-label="Search">Go</button>
+                </div>
+                <a class="appointment" href="#appointments">Book Appointment</a>
+            </div>
+        </div>
+
+    </div>
+    <nav>
+        <div class="container">
+            <a href="#">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#departments">Departments & Centers</a>
+            <a href="#tenders">Tenders</a>
+            <a href="#appointments">Appointments</a>
+            <a href="#research">Research</a>
+            <a href="#library">Library</a>
+            <a href="#events">Events</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="container">
+            <div class="intro">
+                <h2>Welcome to Robin Care Hospital</h2>
+                <p>Leading tertiary care with patient-first approach. 24x7 Emergency | Multi-speciality Departments |
+                    Advanced Diagnostics</p>
+                <div style="display:flex; gap:10px; margin-top:12px">
+                    <button class="btn">Our Services</button>
+                    <a href="#" class="btn" style="background:transparent; border:2px solid #fff; color:#fff;">Contact
+                        Us</a>
+                </div>
+            </div>
+            <div style="width:360px; display:flex; align-items:center; justify-content:center">
+                <img src="https://images.unsplash.com/photo-1580281657521-8b4b3d6c2b6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=420&q=60"
+                    alt="doctor" style="width:100%; border-radius:8px; box-shadow:0 12px 30px rgba(0,0,0,0.3)">
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="features">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=60"
+                    alt="Director">
+                <div class="card-body">
+                    <h3>Director's Message</h3>
+                    <p>Patient care, research and teaching are at the core of Robin Care Hospital.</p>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=60"
+                    alt="Chairman">
+                <div class="card-body">
+                    <h3>Administration</h3>
+                    <p>Online dashboards and portals for appointments, attendance and results.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=60"
+                    alt="Portrait">
+                <div class="card-body">
+                    <h3>Community & Outreach</h3>
+                    <p>Health camps, donation programs, and community awareness initiatives.</p>
+                </div>
+            </article>
+        </div>
+
+        <div style="max-width:var(--max-width); margin:18px auto; padding:0 18px">
+            <section style="display:flex; gap:18px; flex-wrap:wrap">
+                <div
+                    style="flex:2; min-width:280px; background:#fff; padding:14px; border:1px solid #eee; border-radius:8px">
+                    <h3 style="margin-top:0">Latest Notices</h3>
+                    <ul style="margin:0; padding-left:18px; color:var(--muted)">
+                        <li>OPD timings updated — 10 Nov 2025</li>
+                        <li>Blood donation camp — 15 Nov 2025</li>
+                        <li>COVID-19 precautions and visitor policy</li>
+                    </ul>
+                </div>
+
+                <aside style="flex:1; min-width:220px">
+                    <div style="background:#fff; padding:14px; border-radius:8px; border:1px solid #eee">
+                        <h3 style="margin-top:0">OPD Schedule</h3>
+                        <p class="small">Mon - Sat: 9:00 AM - 4:00 PM</p>
+                        <a href="#appointments" class="appointment" style="display:inline-block; margin-top:8px">Make
+                            Appointment</a>
+                    </div>
+                </aside>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <div class="container">
+            <div class="foot-col">
+                <h4>Robin Care Hospital</h4>
+                <p class="small">123 Health Avenue, Cityname — Phone: +91-12345-67890</p>
+            </div>
+            <div class="foot-col">
+                <h4>Quick Links</h4>
+                <p class="small">About • Departments • Appointments • Notices • Contact</p>
+            </div>
+            <div class="foot-col">
+                <h4>Connect</h4>
+                <p class="small">Email: info@robincare.example • Follow us on social media</p>
+            </div>
+        </div>
+
+
+        <!-- Circular Icons -->
+        <div class="top-icons">
+            <div class="icon-box">
+                <div class="icon-circle"><img src="faculty.png" alt="Faculty"></div>
+                <div class="icon-title">Faculty</div>
+            </div>
+            <div class="icon-box">
+                <div class="icon-circle"><img src="patient.png" alt="Patient"></div>
+                <div class="icon-title">Patient</div>
+            </div>
+            <div class="icon-box">
+                <div class="icon-circle"><img src="student.png" alt="Student"></div>
+                <div class="icon-title">Student</div>
+            </div>
+            <div class="icon-box">
+                <div class="icon-circle"><img
+                        src="data:image/jpeg;base64,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"
+                        alt="Employee"></div>
+                <div class="icon-title">Employee</div>
+            </div>
+            <div class="icon-box">
+                <div class="icon-circle"><img src="vendor.png" alt="Vendor"></div>
+                <div class="icon-title">Vendor</div>
+            </div>
+            <div class="icon-box">
+                <div class="icon-circle"><img src="visitor.png" alt="Visitor"></div>
+                <div class="icon-title">Visitor</div>
+            </div>
+        </div>
+
+        <!-- Minister Section -->
+        <div class="minister-section">
+            <h2>Minister Of Health And Family Welfare</h2>
+            <div class="minister-card">
+                <img src="minister1.jpg" alt="Minister">
+                <p><b>Sh. Jagat Prakash Nadda</b><br>Union Minister</p>
+            </div>
+            <div class="minister-card">
+                <img src="minister2.jpg" alt="Minister">
+                <p><b>Sh. Prataprao Jadhav</b><br>Minister of State</p>
+            </div>
+            <div class="minister-card">
+                <img src="minister3.jpg" alt="Minister">
+                <p><b>Smt. Anupriya Patel</b><br>Minister of State</p>
+            </div>
+        </div>
+
+        <!-- Information + Video -->
+        <div class="info-video-section">
+            <div class="info-box">
+                <h3>Information Related to COVID-19</h3>
+                <ul>
+                    <li>Frequently Asked Questions (FAQ)</li>
+                    <li>NAABL Certification Microbiology</li>
+                    <li>Mobile App for AIIMS Antibiotic Policy</li>
+                    <li>Online Application for Newly Joined Postgraduates</li>
+                </ul>
+            </div>
+
+            <div class="video-box">
+                <h3>Robin Care Hospital Channel</h3>
+                <iframe src="https://www.youtube.com/embed/Ff4fRgnuFgQ" title="AIIMS New Delhi"></iframe>
+            </div>
+        </div>
+
+        <!-- ===== Gallery Section ===== -->
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="" alt="Institute Day">
+                    <p>Institute Day</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="#" alt="Important Visits/Events">
+                    <p>Important Visits/Events</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="#" alt="Vintage Photos">
+                    <p>Vintage Photos</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="#" alt="AIIMS at a Glance">
+                    <p>AIIMS at a Glance</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="#" alt="AIIMS Swachhta">
+                    <p>AIIMS Swachhta</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Footer Section ===== -->
+        <footer>
+            <div class="footer-container">
+                <!-- Contact Us -->
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>All India Institute of Medical Sciences<br>Ansari Nagar, New Delhi - 110029</p>
+                    <p><strong>Board Number:</strong> ‪+91-11-26588500‬ / 26588700</p>
+                    <p><strong>Fax:</strong> ‪+91-11-26588663‬ / 26588641</p>
+                    <p><strong>Chief Vigilance Officer (CVO), AIIMS, New Delhi</strong></p>
+                </div>
+
+                <!-- Important Links -->
+                <div class="footer-column">
+                    <h3>Important Links</h3>
+                    <ul>
+                        <li><a href="#">Citizen Charter</a></li>
+                        <li><a href="#">AIIMS Online Donation</a></li>
+                        <li><a href="#">RTI Act 2005</a></li>
+                        <li><a href="#">Proactive Disclosure</a></li>
+                        <li><a href="#">MoHFW</a></li>
+                        <li><a href="#">NGO Associated with AIIMS</a></li>
+                        <li><a href="#">Mission Delhi</a></li>
+                        <li><a href="#">Hamara AIIMS</a></li>
+                    </ul>
+                </div>
+
+                <!-- Other AIIMS -->
+                <div class="footer-column">
+                    <h3>Other AIIMS</h3>
+                    <ul>
+                        <li><a href="#">Robin Care Hospital Imphal</a></li>
+                        <li><a href="#">Robin Care Hospital Thoubal</a></li>
+                        <li><a href="#">Robin Care Hospital Kakching</a></li>
+                        <li><a href="#">Robin Care Hospital Senapati</a></li>
+                        <li><a href="#">Robin Care Hospital Bisnupur</a></li>
+                        <li><a href="#">Robin Care Hospital Tamenglong</a></li>
+                        <li><a href="#">Robin Care Hospital Ukhrul</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bottom-footer">
+                <img src="https://www.india.gov.in/sites/upload_files/npi/files/indgov.png" alt="india.gov.in">
+                <p>© 2025 All India Institute of Medical Sciences, New Delhi</p>
+            </div>
+        </footer>
+
+
+
+
+
+    </footer>
+</body>
+
+</html>
