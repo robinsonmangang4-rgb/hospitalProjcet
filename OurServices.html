@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>RCH Privacy&Policy</title>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+</head>
+
+<body class="bg-gradient-to-r from-teal-500 to-indigo-300">
+
+    <!-- ================= TOP HEADER ================= -->
+    <div class="sticky top-0 left-0 w-full z-20 bg-teal-100 border-b-4 border-gray-200">
+
+        <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+
+            <!-- LOGO + TITLE -->
+            <div class="flex items-center gap-3">
+                <img src="Dr.logo4.jpg" alt="logo" class="w-16 h-16 rounded-lg object-cover">
+                <div>
+                    <h1 class="text-xl text-[#7b1f2a] font-bold">Robin Care Hospital</h1>
+                    <p class="text-gray-600 text-sm">Comprehensive Healthcare — Compassion & Excellence</p>
+                </div>
+            </div>
+
+            <!-- DESKTOP RIGHT SIDE -->
+            <div class="hidden md:flex items-center gap-4 text-sm">
+
+                <div class="text-gray-700 flex items-center gap-2">
+                    <span>OPD Appointment</span> • <span>Dashboard</span>
+                </div>
+
+                <!-- Search -->
+                <div class="relative">
+                    <input type="text" placeholder="Search..."
+                        class="px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-pink-300" />
+                    <button class="absolute right-1 top-1 bg-[#7b1f2a] hover:bg-pink-300 text-white rounded-full px-3 py-1 text-sm">
+                        Go
+                    </button>
+                </div>
+
+                <a href="Appointments.html"
+                    class="bg-pink-300 hover:bg-[#661821] text-white font-semibold px-4 py-2 rounded-full">
+                    Book Appointment
+                </a>
+            </div>
+
+            <!-- MOBILE HAMBURGER -->
+            <button id="menuBtn" class="md:hidden p-2 border rounded-md">
+                <div class="w-6 h-0.5 bg-black mb-1"></div>
+                <div class="w-6 h-0.5 bg-black mb-1"></div>
+                <div class="w-6 h-0.5 bg-black"></div>
+            </button>
+        </div>
+
+        <!-- ================= MOBILE MENU ================= -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t shadow-md p-5 space-y-6">
+
+            <!-- OPD + Dashboard -->
+            <div class="text-gray-700 flex gap-2 text-sm">
+                <span>OPD Appointment</span> • <span>Dashboard</span>
+            </div>
+
+            <!-- Search -->
+            <div class="relative">
+                <input type="text" placeholder="Search..."
+                    class="w-full px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-[#7b1f2a]" />
+                <button
+                    class="absolute right-1 top-1 bg-[#7b1f2a] text-white rounded-full px-3 py-1 text-sm">Go</button>
+            </div>
+
+            <!-- MOBILE NAV LINKS -->
+            <div class="flex flex-col text-gray-800 text-base space-y-3">
+
+                <a href="RobinCareHospitalTailwind.html" class="hover:text-[#7b1f2a] font-medium">Home</a>
+                <a href="AboutUs.html" class="hover:text-[#7b1f2a] font-medium">About Us</a>
+                <a href="Departments&Centers.html" class="hover:text-[#7b1f2a] font-medium">Departments & Centers</a>
+                <a href="Tenders.html" class="hover:text-[#7b1f2a] font-medium">Tenders</a>
+                <a href="Appointments.html" class="hover:text-[#7b1f2a] font-medium">Appointments</a>
+                <a href="Research.html" class="hover:text-[#7b1f2a] font-medium">Research</a>
+                <a href="Library.html" class="hover:text-[#7b1f2a] font-medium">Library</a>
+                <a href="Events.html" class="hover:text-[#7b1f2a] font-medium">Events</a>
+
+            </div>
+
+            <!-- Appointment Button -->
+            <a href="Appointments.html"
+                class="block text-center bg-[#7b1f2a] hover:bg-[#661821] text-white font-semibold px-4 py-2 rounded-full">
+                Book Appointment
+            </a>
+        </div>
+
+    </div>
+
+    <!-- ================= DESKTOP NAVBAR ================= -->
+    <nav class="hidden md:block bg-[#7b1f2a] text-white shadow-md">
+        <div class="max-w-6xl mx-auto flex gap-4 px-4 py-3">
+            <a href="RobinCareHospitalTailwind.html" class="hover:bg-white/10 px-3 py-2 rounded">Home</a>
+            <a href="AboutUs.html" class="hover:bg-white/10 px-3 py-2 rounded">About Us</a>
+            <a href="Departments&Centers.html" class="hover:bg-white/10 px-3 py-2 rounded">Departments & Centers</a>
+            <a href="Tenders.html" class="hover:bg-white/10 px-3 py-2 rounded">Tenders</a>
+            <a href="Appointments.html" class="hover:bg-white/10 px-3 py-2 rounded">Appointments</a>
+            <a href="Research.html" class="hover:bg-white/10 px-3 py-2 rounded">Research</a>
+            <a href="Library.html" class="hover:bg-white/10 px-3 py-2 rounded">Library</a>
+            <a href="Events.html" class="hover:bg-white/10 px-3 py-2 rounded">Events</a>
+        </div>
+    </nav>
+
+    <style>
+        /* Custom style to apply the consistent lift effect on hover across all 12 cards */
+        .card-lift:hover {
+            transform: translateY(-6px);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            /* Enhanced shadow on lift */
+        }
+    </style>
+
+    <!-- COMPREHENSIVE SERVICES & QUICK ACCESS SECTION -->
+    <section class="max-w-7xl mx-auto py-12 md:py-20 px-4 sm:px-6 lg:px-8  bg-transparent">
+
+        <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-red-600 text-transparent bg-clip-text">
+                Comprehensive Hospital Services & Quick Access
+            </h2>
+            <p class="mt-4 text-xl text-white/80 max-w-3xl mx-auto">
+                Find the information you need or explore our specialized care options below. 
+            </p>
+        </div>
+
+        <!-- COMBINED 12 CARDS GRID (Responsive up to 4 columns) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+            <!-- QUICK ACCESS CARDS (FA Icons) -->
+
+            <!-- Card 1: Hospital Location -->
+            <div class=" bg-gradient-to-b from-orange-300 to-blue-300 p-5 rounded-xl shadow-lg card-lift">
+                <div class="flex items-center gap-3 mb-3 flex-col">
+                    <i class="fa-solid fa-location-dot text-2xl text-indigo-700"></i>
+                    <h2 class="text-xl font-semibold ">Hospital Location</h2>
+                </div>
+                <ul class="space-y-2 text-gray-800 items-center text-center ">
+                    <li> <a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Find Us on
+                            Map</a></li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Nearby
+                            Facilities</a></li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Transport
+                            Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Card 2: COVID-19 Information -->
+            <div class="bg-gradient-to-b from-yellow-300 to-blue-300 p-5 rounded-xl shadow-lg card-lift">
+                <div class="flex items-center gap-3 mb-3 flex-col">
+                    <i class="fa-solid fa-virus-covid text-2xl text-indigo-700"></i>
+                    <h2 class="text-xl font-semibold whitespace-nowrap">COVID-19 Information</h2>
+                </div>
+                <ul class="space-y-2 text-gray-800 items-center text-center whitespace-nowrap">
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">FAQs</a>
+                    </li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Vaccination
+                            Info</a></li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Online
+                            Appointment</a></li>
+                </ul>
+            </div>
+
+            <!-- Card 3: Hospital Channel -->
+            <div class="bg-gradient-to-b from-sky-300 to-indigo-300 p-5 rounded-xl shadow-lg card-lift">
+                <div class="flex items-center gap-3 mb-3 flex-col">
+                    <i class="fa-solid fa-tv text-2xl text-indigo-700"></i>
+                    <h2 class="text-xl font-semibold">Hospital Channel</h2>
+                </div>
+                <ul class="space-y-2 text-gray-800 items-center text-center">
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Online
+                            Consultation</a>
+                    </li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Health
+                            Videos</a></li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Doctor
+                            Interviews</a></li>
+                </ul>
+            </div>
+
+            <!-- Card 4: Diagnostics & Labs (Quick Access) -->
+            <div class="bg-gradient-to-b from-purple-300 to-blue-300 p-5 rounded-xl shadow-lg card-lift">
+                <div class="flex items-center gap-3 mb-3 flex-col">
+                    <i class="fa-solid fa-microscope text-2xl text-indigo-700"></i>
+                    <h2 class="text-xl font-semibold">Diagnostics & Labs</h2>
+                </div>
+                <ul class="space-y-2 text-gray-800 items-center text-center whitespace-nowrap">
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Blood
+                            Test</a></li>
+                    <li><a href="#" class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">MRI
+                            / CT Scan / X-Ray</a></li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Pathology</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card 5: Health Checkup Packages -->
+            <div class="bg-gradient-to-b from-green-300 to-blue-300 p-5 rounded-xl shadow-lg card-lift">
+                <div class="flex items-center gap-3 mb-3 flex-col">
+                    <i class="fa-solid fa-heart-pulse text-2xl text-indigo-700"></i>
+                    <h2 class="text-xl font-semibold whitespace-nowrap">Health Checkup Packages</h2>
+                </div>
+                <ul class="space-y-2 text-gray-800 items-center text-center">
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Full Body
+                            Checkup</a></li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Heart
+                            Checkup</a></li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Women's
+                            Health</a></li>
+                </ul>
+            </div>
+
+            <!-- Card 6: Emergency & Ambulance -->
+            <div class="bg-gradient-to-b from-red-300 to-blue-300 p-5 rounded-xl shadow-lg card-lift">
+                <div class="flex items-center gap-3 mb-3 flex-col">
+                    <i class="fa-solid fa-truck-medical text-2xl text-indigo-700"></i>
+                    <h2 class="text-xl font-semibold whitespace-nowrap">Emergency & Ambulance</h2>
+                </div>
+                <ul class="space-y-2 text-gray-800 items-center text-center whitespace-nowrap">
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">24/7
+                            Emergency Care</a></li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Ambulance
+                            Services</a></li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Emergency
+                            Numbers</a></li>
+                </ul>
+            </div>
+
+            <!-- Card 7: Doctor’s Specialities (Quick Access) -->
+            <div class="bg-gradient-to-b from-pink-300 to-blue-300 p-5 rounded-xl shadow-lg card-lift">
+                <div class="flex items-center gap-3 mb-3 flex-col">
+                    <i class="fa-solid fa-user-doctor text-2xl text-indigo-700"></i>
+                    <h2 class="text-xl font-semibold">Doctor’s Specialities</h2>
+                </div>
+                <ul class="space-y-2 text-gray-800 items-center text-center">
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Cardiology</a>
+                    </li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Neurology</a>
+                    </li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Orthopedics</a>
+                    </li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Pediatrics</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card 8: Patient Helpdesk -->
+            <div class="bg-gradient-to-b from-teal-300 to-blue-300 p-5 rounded-xl shadow-lg card-lift">
+                <div class="flex items-center gap-3 mb-3 flex-col">
+                    <i class="fa-solid fa-headset text-2xl text-indigo-700"></i>
+                    <h2 class="text-xl font-semibold">Patient Helpdesk</h2>
+                </div>
+                <ul class="space-y-2 text-gray-800 items-center text-center">
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Billing
+                            Support</a></li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Insurance &
+                            TPA</a></li>
+                    <li><a href="#"
+                            class="hover:bg-blue-200 px-10 py-0 rounded-lg hover:text-indigo-700 transition">Patient
+                            Rights</a></li>
+                </ul>
+            </div>
+
+            <!-- CORE SERVICES CARDS (SVG Icons - now styled consistently) -->
+
+            <!-- Service Card 9: Cardiology (Core) -->
+            <div class="bg-gradient-to-b from-blue-300 to-indigo-300 rounded-xl shadow-lg p-6 text-center card-lift">
+                <svg class="w-12 h-12 text-indigo-700 mx-auto mb-4" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                    </path>
+                </svg>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Advanced Cardiology</h3>
+                <p class="text-gray-700 text-sm mb-4">Expert heart care and advanced cardiac surgery.</p>
+                <a href="#"
+                    class="inline-block text-indigo-700 font-semibold text-sm hover:underline hover:text-indigo-900 transition">Learn
+                    More</a>
+            </div>
+
+            <!-- Service Card 10: 24/7 Emergency (Core) -->
+            <div class="bg-gradient-to-b from-blue-300 to-indigo-300 rounded-xl shadow-lg p-6 text-center card-lift">
+                <svg class="w-12 h-12 text-indigo-700 mx-auto mb-4" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Critical Emergency</h3>
+                <p class="text-gray-700 text-sm mb-4">Rapid response and trauma management services.</p>
+                <a href="tel:+18005551234"
+                    class="inline-block text-indigo-700 font-semibold text-sm hover:underline hover:text-indigo-900 transition">Call
+                    Emergency Line</a>
+            </div>
+
+            <!-- Service Card 11: Diagnostic Labs (Core) -->
+            <div class="bg-gradient-to-b from-blue-300 to-indigo-300 rounded-xl shadow-lg p-6 text-center card-lift">
+                <svg class="w-12 h-12 text-indigo-700 mx-auto mb-4" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                    </path>
+                </svg>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">State-of-the-art Diagnostics</h3>
+                <p class="text-gray-700 text-sm mb-4">State-of-the-art lab and imaging facilities.</p>
+                <a href="#"
+                    class="inline-block text-indigo-700 font-semibold text-sm hover:underline hover:text-indigo-900 transition">Book
+                    a Test</a>
+            </div>
+
+            <!-- Service Card 12: Oncology (Core) -->
+            <div class="bg-gradient-to-b from-blue-300 to-indigo-300 rounded-xl shadow-lg p-6 text-center card-lift">
+                <svg class="w-12 h-12 text-indigo-700 mx-auto mb-4" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0h6">
+                    </path>
+                </svg>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Specialized Oncology</h3>
+                <p class="text-gray-700 text-sm mb-4">Comprehensive cancer screening and treatment.</p>
+                <a href="#"
+                    class="inline-block text-indigo-700 font-semibold text-sm hover:underline hover:text-indigo-900 transition">View
+                    Programs</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FIND A DOCTOR SECTION (COLOR AND HOVER UPDATED) -->
+    <section id="doctors" class="py-20  bg-transparent bg-gradient-to-b from-yellow-200 to-blue-300 p-5 rounded-xl shadow-lg ">
+">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl bg-gradient-to-r from-pink-600 to-sky-500 text-transparent bg-clip-text">
+                    Search Our Specialists
+                </h2>
+                <p class="mt-4 text-lg text-white/80 ">
+                    Find the perfect doctor by specialty or name.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white p-6 sm:p-10 rounded-xl shadow-2xl bg-gradient-to-b from-green-300 to-blue-300 card-lift">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Dropdown for Specialty -->
+                    <select id="specialty-select"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 transition duration-150">
+                        <option value="">Select Specialty</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="orthopedics">Orthopedics</option>
+                    </select>
+                    <!-- Text Input for Name -->
+                    <input type="text" id="doctor-name-input" placeholder="Doctor's Name"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 transition duration-150">
+                    <!-- Search Button (Color and Hover Updated) -->
+                    <button onclick="console.log('Searching doctors... (Functionality not implemented)')"
+                        class="w-full px-4 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition duration-150 transform card-lift">
+                        Search Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Featured Doctor Profile Snippet (Color and Hover Updated) -->
+            <div class="mt-12 text-center ">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 bg-gradient-to-r from-sky-600 to-rose-400 text-transparent bg-clip-text">Meet Our Chief of Medicine</h3>
+                <div class="bg-white max-w-sm mx-auto p-6 rounded-xl shadow-lg flex flex-col items-center card-lift bg-gradient-to-b from-green-300 to-blue-300 card-lift">
+                    <img class="w-24 h-24 rounded-full object-cover mb-4 ring-4 ring-indigo-500"
+                        src="Dr.Robin2.jpg" alt="Dr.Robin Profile">
+                    <h4 class="text-xl font-bold text-indigo-700">Dr. Jane Doe</h4>
+                    <p class="text-gray-600 mb-3">M.D., FACC | Chief Cardiologist</p>
+                    <p class="text-sm text-gray-500 mb-4">"Committed to providing personalized, evidence-based care to
+                        every patient."</p>
+                    <!-- Button (Color and Hover Updated) -->
+                    <a href="#"
+                        class="text-sm px-4 py-2 bg-indigo-500 text-white rounded-lg font-semibold hover:bg-indigo-600 transition card-lift">Book
+                        a Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+
+    <footer class="bg-[#647779] text-gray-200 py-10">
+        <div class="max-w-7xl mx-auto px-6 m-2 flex justify-between ml-24">
+
+            <!-- GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+
+                <!-- 1. Contact Us -->
+                <div>
+                    <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                        Contact Us
+                    </h3>
+                    <p class="text-sm leading-6">
+                        Robin Care Medical Sciences<br>
+                        Imphal, Manipur 795004<br>
+                        Phone: +91-11-26588850 / 26588700 <br>
+                        Fax: +91-11-265886588
+                    </p>
+                </div>
+
+                <!-- 2. Important Links -->
+                <div>
+                    <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                        Important Links
+                    </h3>
+                    <ul class="text-sm space-y-1">
+                        <li><a href="#" class="hover:text-yellow-400">Citizen Charter</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">RTI</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Online Donation</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Proactive Disclosure</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3. Other Hospitals -->
+                <div>
+                    <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                        Other Robin Hospitals
+                    </h3>
+                    <ul class="text-sm space-y-1">
+                        <li><a href="#" class="hover:text-yellow-400">Thoubal</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Kaching</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Senapati</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Moreh</a></li>
+                    </ul>
+                </div>
+
+                <!-- 4. Legal & Policies -->
+                <div>
+                    <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                        Legal & Policies
+                    </h3>
+                    <ul class="text-sm space-y-1">
+                        <li><a href="Terms&Conditions.html" class="hover:text-yellow-400">Terms & Conditions</a></li>
+                        <li><a href="PatientGuidelines.html" class="hover:text-yellow-400">Patient Guidelines</a></li>
+                    </ul>
+                </div>
+
+                <!-- 5. About / Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                        Quick Links
+                    </h3>
+                    <ul class="text-sm space-y-1">
+                        <li><a href="AboutUs.html" class="hover:text-yellow-400">About Us</a></li>
+                        <li><a href="Departments&Centers.html" class="hover:text-yellow-400">Departments</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Doctors</a></li>
+                        <li><a href="" class="hover:text-yellow-400">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr class=" m-4 border-pink-500 border-t-3 w-[70%] mx-auto p-2">
+
+        <div class="border-t border-gray-500 text-center mt-2 pt-4 Py-1 text-sm text-gray-300">
+            <img src="Dr.logo4.jpg" alt="India logo" class="mx-auto mb-2 w-28  rounded-[100%]">
+
+            <div class="">
+                <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-sky-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <p>© 2025 Robin Care Hospital, Manipur</p>
+        </div>
+    </footer>
+
+    <!-- ================= JS ================= -->
+    <script>
+        const btn = document.getElementById("menuBtn");
+        const menu = document.getElementById("mobileMenu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+
+</html>
