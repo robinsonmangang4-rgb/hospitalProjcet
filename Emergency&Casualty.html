@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>RCH Emergency & Casualty</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styling for the urgent red color palette */
+        .emergency-red {
+            background-color: #dc2626;
+            /* Red 600 */
+        }
+        .emergency-red:hover {
+            background-color: #b91c1c;
+            /* Red 700 */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-teal-500 to-indigo-300">
+    <!-- ================= TOP HEADER ================= -->
+    <div class="sticky top-0 left-0 w-full z-20 bg-teal-100 border-b-4 border-gray-200">
+
+        <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+
+            <!-- LOGO + TITLE -->
+            <div class="flex items-center gap-3">
+                <img src="Dr.logo4.jpg" alt="logo" class="w-16 h-16 rounded-lg object-cover">
+                <div>
+                    <h1 class="text-xl text-[#7b1f2a] font-bold">Robin Care Hospital</h1>
+                    <p class="text-gray-600 text-sm">Compassion & Excellence</p>
+                </div>
+            </div>
+
+            <!-- DESKTOP RIGHT SIDE -->
+            <div class="hidden md:flex items-center gap-4 text-sm">
+
+                <div class="text-gray-700 flex items-center gap-2">
+                    <a href="opd-appointment.html" class="text-gray-700 hover:text-blue-600"> OPD Appointment </a>
+                    <a href="dashboard.html" class="text-gray-700 hover:text-blue-600 m-6"> Dashboard </a>
+                </div>
+
+                <!-- Search -->
+                <div class="relative">
+                    <input type="text" placeholder="Search..."
+                        class="px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-[#7b1f2a]" />
+                    <button class="absolute right-1 top-1 bg-[#7b1f2a] text-white rounded-full px-3 py-1 text-sm">
+                        Go
+                    </button>
+                </div>
+
+                <a href="Appointments.html"
+                    class="bg-[#7b1f2a] hover:bg-[#661821] text-white font-semibold px-4 py-2 rounded-full">
+                    Book Appointment
+                </a>
+            </div>
+
+            <!-- MOBILE HAMBURGER -->
+            <button id="menuBtn" class="md:hidden p-2 border rounded-md">
+                <div class="w-6 h-0.5 bg-black mb-1"></div>
+                <div class="w-6 h-0.5 bg-black mb-1"></div>
+                <div class="w-6 h-0.5 bg-black"></div>
+            </button>
+        </div>
+
+        <!-- ================= MOBILE MENU ================= -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t shadow-md p-5 space-y-6">
+
+            <!-- OPD + Dashboard -->
+            <div class="text-gray-700 flex gap-2 text-sm">
+                <a href="OPDAppointment.html" class="text-gray-700 hover:text-blue-600"> OPD Appointment </a>
+                <a href="dashboard.html" class="text-gray-700 hover:text-blue-600"> Dashboard </a>
+            </div>
+
+            <!-- Search -->
+            <div class="relative">
+                <input type="text" placeholder="Search..."
+                    class="w-full px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-[#7b1f2a]" />
+                <button
+                    class="absolute right-1 top-1 bg-[#7b1f2a] text-white rounded-full px-3 py-1 text-sm">Go</button>
+            </div>
+
+            <!-- MOBILE NAV LINKS -->
+            <div class="flex flex-col text-gray-800 text-base space-y-3">
+
+                <a href="RobinCareHospitalTailwind.html" class="hover:text-[#7b1f2a] font-medium">Home</a>
+                <a href="AboutUs.html" class="hover:text-[#7b1f2a] font-medium">About Us</a>
+                <a href="Departments&Centers.html" class="hover:text-[#7b1f2a] font-medium">Departments & Centers</a>
+                <a href="Tenders.html" class="hover:text-[#7b1f2a] font-medium">Tenders</a>
+                <a href="Research.html" class="hover:text-[#7b1f2a] font-medium">Research</a>
+                <a href="Emergency&Casualty.html" class="hover:text-[#7b1f2a] font-medium">Emergency & Casualty</a>
+                <a href="Library.html" class="hover:text-[#7b1f2a] font-medium">Library</a>
+                <a href="Events.html" class="hover:text-[#7b1f2a] font-medium">Events</a>
+
+            </div>
+
+            <!-- Appointment Button -->
+            <a href="Appointments.html"
+                class="block text-center bg-[#7b1f2a] hover:bg-[#661821] text-white font-semibold px-4 py-2 rounded-full">
+                Book Appointment
+            </a>
+        </div>
+
+    </div>
+    <!-- ================= DESKTOP NAVBAR ================= -->
+    <nav class="hidden md:block bg-[#7b1f2a] text-white shadow-md">
+        <div class="max-w-6xl mx-auto flex gap-4 px-4 py-3 justify-evenly">
+            <a href="RobinCareHospitalTailwind.html" class="hover:bg-white/10 px-3 py-2 rounded">Home</a>
+            <a href="AboutUs.html" class="hover:bg-white/10 px-3 py-2 rounded">About Us</a>
+            <a href="Departments&Centers.html" class="hover:bg-white/10 px-3 py-2 rounded">Departments & Centers</a>
+            <a href="Tenders.html" class="hover:bg-white/10 px-3 py-2 rounded">Tenders</a>
+            <a href="Research.html" class="hover:bg-white/10 px-3 py-2 rounded">Research</a>            
+            <a href="Emergency&Casualty.html" class="hover:bg-white/10 px-3 py-2 rounded">Emergency & Casualty</a>
+            <a href="Library.html" class="hover:bg-white/10 px-3 py-2 rounded">Library</a>
+            <a href="Events.html" class="hover:bg-white/10 px-3 py-2 rounded">Events</a>
+        </div>
+    </nav>
+        <!-- Emergency Banner -->
+        <section class="max-w-5xl mx-auto mt-8 p-6 bg-white shadow-xl rounded-2xl border-l-8 border-red-600">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <i class="fa-solid fa-triangle-exclamation text-red-600 text-6xl"></i>
+                <div>
+                    <h2 class="text-2xl font-semibold mb-2">Emergency Helpline</h2>
+                    <p class="text-gray-700 mt-1">Our casualty department operates round-the-clock with trained medical
+                        professionals ready for immediate action.</p>
+                    <a href="tel:9999999999"
+                        class="inline-block mt-4 emergency-red text-white px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition transform hover:scale-[1.01] hover:bg-red-700">
+                        <i class="fa-solid fa-phone mr-2"></i> Call Emergency Now (9999 999 999)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="max-w-5xl mx-auto mt-8 p-6 bg-white shadow-xl rounded-2xl">
+            <h2 class="text-2xl font-extrabold mb-6 text-red-600 border-b pb-2">Emergency Services We Provide</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="flex flex-col items-center p-5 bg-red-50 border border-red-200 rounded-xl shadow-md transition hover:shadow-lg">
+                    <i class="fa-solid fa-car-crash text-red-600 text-4xl mb-3"></i>
+                    <p class="font-semibold text-center">Accident & Trauma Care</p>
+                </div>
+                <div
+                    class="flex flex-col items-center p-5 bg-red-50 border border-red-200 rounded-xl shadow-md transition hover:shadow-lg">
+                    <i class="fa-solid fa-heart-pulse text-red-600 text-4xl mb-3"></i>
+                    <p class="font-semibold text-center">Heart Attack & Cardiac Emergency</p>
+                </div>
+                <div
+                    class="flex flex-col items-center p-5 bg-red-50 border border-red-200 rounded-xl shadow-md transition hover:shadow-lg">
+                    <i class="fa-solid fa-brain text-red-600 text-4xl mb-3"></i>
+                    <p class="font-semibold text-center">Stroke Management</p>
+                </div>
+                <div
+                    class="flex flex-col items-center p-5 bg-red-50 border border-red-200 rounded-xl shadow-md transition hover:shadow-lg">
+                    <i class="fa-solid fa-kit-medical text-red-600 text-4xl mb-3"></i>
+                    <p class="font-semibold text-center">Critical First Aid & Treatment</p>
+                </div>
+                <div
+                    class="flex flex-col items-center p-5 bg-red-50 border border-red-200 rounded-xl shadow-md transition hover:shadow-lg">
+                    <i class="fa-solid fa-user-nurse text-red-600 text-4xl mb-3"></i>
+                    <p class="font-semibold text-center">24×7 On-Duty Medical Team</p>
+                </div>
+                <div
+                    class="flex flex-col items-center p-5 bg-red-50 border border-red-200 rounded-xl shadow-md transition hover:shadow-lg">
+                    <i class="fa-solid fa-truck-medical text-red-600 text-4xl mb-3"></i>
+                    <p class="font-semibold text-center">Emergency Ambulance Service</p>
+                </div>
+            </div>
+        </section>
+        <!-- Ambulance Section -->
+        <section
+            class="max-w-5xl mx-auto mt-8 mb-10 p-6 bg-white shadow-xl rounded-2xl flex flex-col md:flex-row items-center gap-6 border-b-8 border-red-600">
+            <i class="fa-solid fa-ambulance text-red-600 text-6xl"></i>
+            <div>
+                <h2 class="text-2xl font-bold">Ambulance Assistance</h2>
+                <p class="text-gray-700 mt-2">We provide fast-response ambulance services equipped with advanced
+                    lifesaving tools, ensuring care begins immediately upon patient contact.</p>
+                <a href="tel:9999999999"
+                    class="inline-block mt-4 bg-gray-800 text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-black transition">
+                    Request Ambulance
+                </a>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-[#647779] text-gray-200 py-10">
+            <div class="max-w-7xl mx-auto px-6 m-2 flex justify-evenly ml-24">
+
+                <!-- GRID -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24">
+
+
+                    <!-- 1. Important Links -->
+                    <div>
+                        <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                            Important Links
+                        </h3>
+                        <ul class="text-sm space-y-1">
+                            <li><a href="#" class="hover:text-yellow-400">Citizen Charter</a></li>
+                            <li><a href="#" class="hover:text-yellow-400">RTI</a></li>
+                            <li><a href="#" class="hover:text-yellow-400">Online Donation</a></li>
+                            <li><a href="#" class="hover:text-yellow-400">Proactive Disclosure</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. Other Hospitals -->
+                    <div>
+                        <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                            Other Robin Hospitals
+                        </h3>
+                        <ul class="text-sm space-y-1">
+                            <li><a href="#" class="hover:text-yellow-400">Thoubal</a></li>
+                            <li><a href="#" class="hover:text-yellow-400">Kaching</a></li>
+                            <li><a href="#" class="hover:text-yellow-400">Senapati</a></li>
+                            <li><a href="#" class="hover:text-yellow-400">Moreh</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. Legal & Policies -->
+                    <div>
+                        <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                            Legal & Policies
+                        </h3>
+                        <ul class="text-sm space-y-1">
+                            <li><a href="Terms&Conditions.html" class="hover:text-yellow-400">Terms & Conditions</a>
+                            </li>
+                            <li><a href="PatientGuidelines.html" class="hover:text-yellow-400">Patient Guidelines</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. About / Quick Links -->
+                    <div>
+                        <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                            Quick Links
+                        </h3>
+                        <ul class="text-sm space-y-1">
+                            <li><a href="AboutUs.html" class="hover:text-yellow-400">About Us</a></li>
+                            <li><a href="Departments&Centers.html" class="hover:text-yellow-400">Departments</a></li>
+                            <li><a href="#" class="hover:text-yellow-400">Doctors</a></li>
+                            <li><a href="contactUs.html" class="hover:text-yellow-400">Contact Us</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class=" m-4 border-pink-500 border-t-3 w-[70%] mx-auto p-2">
+
+            <div class="border-t border-gray-500 text-center mt-2 pt-4 Py-1 text-sm text-gray-300">
+                <img src="Dr.logo4.jpg" alt="India logo" class="mx-auto mb-2 w-28  rounded-[100%]">
+
+                <div class="">
+                    <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-sky-400"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-blue-500"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+                <p>© 2025 Robin Care Hospital, Manipur</p>
+            </div>
+        </footer>
+        <!-- ================= JS ================= -->
+        <script>
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        </script>
+    </body>
+</html>
