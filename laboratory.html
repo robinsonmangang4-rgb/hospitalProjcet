@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <title>RCH Laboratory</title>
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+    .text-primary-sky {
+        color: #0ea5e9; /* Sky 500 */
+    }
+    .bg-primary-sky {
+        background-color: #0ea5e9;
+    }
+    .hover\:bg-sky-700:hover {
+        background-color: #0369a1; /* Sky 800 */
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-r from-teal-500 to-indigo-300">
+  <!-- ================= TOP HEADER ================= -->
+  <div class=" sticky top-0 left-0 w-full z-20 bg-teal-100 border-b-4 border-gray-200">
+
+    <div class="  max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+
+      <!-- LOGO + TITLE -->
+      <div class="flex items-center gap-3">
+        <img src="Dr.logo4.jpg" alt="logo" class="w-16 h-16 rounded-lg object-cover">
+        <div>
+          <h1 class="text-xl text-[#7b1f2a] font-bold">Robin Care Hospital</h1>
+          <p class="text-gray-600 text-sm">Compassion & Excellence</p>
+        </div>
+      </div>
+
+      <!-- DESKTOP RIGHT SIDE -->
+      <div class="hidden lg:flex items-center gap-4 text-sm">
+
+        <div class="text-gray-700 flex items-center gap-2">
+          <a href="opd-appointment.html" class="text-gray-700 hover:text-blue-600"> OPD Appointment </a>
+          <a href="dashboard.html" class="text-gray-700 hover:text-blue-600 m-6"> Dashboard </a>
+        </div>
+
+        <!-- Search -->
+        <div class="relative">
+          <input type="text" placeholder="Search..."
+            class="px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-[#7b1f2a]" />
+          <button class="absolute right-1 top-1 bg-[#7b1f2a] text-white rounded-full px-3 py-1 text-sm">
+            Go
+          </button>
+        </div>
+
+        <a href="Appointments.html"
+          class="bg-[#7b1f2a] hover:bg-[#661821] text-white font-semibold px-4 py-2 rounded-full">
+          Book Appointment
+        </a>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <button id="menuBtn" class="xl:hidden p-2 border rounded-md">
+        <div class="w-6 h-0.5 bg-black mb-1"></div>
+        <div class="w-6 h-0.5 bg-black mb-1"></div>
+        <div class="w-6 h-0.5 bg-black"></div>
+      </button>
+    </div>
+  </div>
+  <div>
+    
+      <!-- ================= DESKTOP NAVBAR ================= -->
+      <nav class="hidden xl:block bg-[#7b1f2a] text-white shadow-md p-0 m-0 ">
+        <div class=" mx-auto flex gap-4 px-4 py-3 justify-evenly">
+          <a href="RobinCareHospitalTailwind.html" class="hover:bg-white/10 px-3 py-2 rounded">Home</a>
+          <a href="AboutUs.html" class="hover:bg-white/10 px-3 py-2 rounded">About Us</a>
+          <a href="Departments&Centers.html" class="hover:bg-white/10 px-3 py-2 rounded">Departments & Centers</a>
+          <a href="Careers.html" class="hover:bg-white/10 px-3 py-2 rounded">Careers</a>
+          <a href="Tenders.html" class="hover:bg-white/10 px-3 py-2 rounded">Tenders</a>
+          <a href="Research.html" class="hover:bg-white/10 px-3 py-2 rounded">Research</a>
+          <a href="Emergency&Casualty.html" class="hover:bg-white/10 px-3 py-2 rounded">Emergency & Casualty</a>
+          <a href="Pharmacy.html" class="over:bg-white/10 px-3 py-2 rounded">Pharmacy</a>
+          <a href="Diagnostics.html" class="over:bg-white/10 px-3 py-2 rounded">Diagnostics</a>
+          <a href="Laboratory.html" class="hover:bg-white/10 px-3 py-2 rounded">Laboratory</a>
+          <a href="Events.html" class="over:bg-white/10 px-3 py-2 rounded">Events</a>
+          <a href="Gallery.html" class="over:bg-white/10 px-3 py-2 rounded">Gallery</a>
+        </div>
+      </nav>
+    <!-- ================= MOBILE MENU ================= -->
+    <div id="mobileMenu" class=" hidden xl:hidden bg-white border-t shadow-md p-5 space-y-6">
+
+      <!-- OPD + Dashboard -->
+      <div class="text-gray-700 flex gap-2 text-sm">
+        <a href="OPDAppointment.html" class="text-gray-700 hover:text-blue-600"> OPD Appointment </a>
+        <a href="dashboard.html" class="text-gray-700 hover:text-blue-600"> Dashboard </a>
+      </div>
+
+      <!-- Search -->
+      <div class="relative">
+        <input type="text" placeholder="Search..."
+          class="w-full px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-[#7b1f2a]" />
+        <button class="absolute right-1 top-1 bg-[#7b1f2a] text-white rounded-full px-3 py-1 text-sm">Go</button>
+      </div>
+
+      <!-- MOBILE NAV LINKS -->
+      <div class="flex flex-col text-gray-800 text-base space-y-3">
+
+        <a href="RobinCareHospitalTailwind.html" class="hover:text-[#7b1f2a] font-medium">Home</a>
+        <a href="AboutUs.html" class="hover:text-[#7b1f2a] font-medium">About Us</a>
+        <a href="Departments&Centers.html" class="hover:text-[#7b1f2a] font-medium">Departments & Centers</a>
+        <a href="Careers.html" class="hover:text-[#7b1f2a] font-medium">Careers</a>
+        <a href="Tenders.html" class="hover:text-[#7b1f2a] font-medium">Tenders</a>
+        <a href="Research.html" class="hover:text-[#7b1f2a] font-medium">Research</a>
+        <a href="Emergency&Casualty.html" class="hover:text-[#7b1f2a] font-medium">Emergency & Casualty</a>
+        <a href="Pharmacy.html" class="hover:text-[#7b1f2a] font-medium">Pharmacy</a>
+        <a href="Diagnostics.html" class="hover:text-[#7b1f2a] font-medium">Diagnostics</a>
+        <a href="Laboratory.html" class="hover:text-[#7b1f2a] font-medium">Laboratory</a>
+        <a href="Events.html" class="hover:text-[#7b1f2a] font-medium">Events</a>
+        <a href="Gallery.html" class="hover:text-[#7b1f2a] font-medium">Gallery</a>
+      </div>
+
+      <!-- Appointment Button -->
+      <a href="Appointments.html"
+        class="block text-center bg-[#7b1f2a] hover:bg-[#661821] text-white font-semibold px-4 py-2 rounded-full">
+        Book Appointment
+      </a>
+    </div>
+  </div>
+ 
+<div class="bg-gradient-to-r from-teal-500 to-indigo-300">
+
+  <!-- Hero Section -->
+  <section class="px-4 py-10 text-center bg-primary-sky/10 border-b-4 border-primary-sky shadow-md">
+    <h2 class="text-4xl font-extrabold text-gray-800">Advanced Diagnostic Laboratory</h2>
+    <p class="text-gray-600 text-lg mt-2">
+      Accurate and reliable results powered by modern equipment and certified pathologists.
+    </p>
+  </section>
+
+  <!-- Why Choose Our Lab -->
+  <section class="max-w-4xl mx-auto px-4 py-10">
+    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center"><i class="fas fa-chart-line text-red-700 mr-2"></i> Why Choose Our Lab?</h3>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+
+      <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-sky">
+        <h4 class="font-bold text-xl text-primary-sky mb-1 flex items-center"><i class="fas fa-microscope mr-2"></i> Modern Equipment</h4>
+        <p class="text-gray-600 text-sm">
+          Fully automated machines ensure precision and minimize human error.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-sky">
+        <h4 class="font-bold text-xl text-primary-sky mb-1 flex items-center"><i class="fas fa-stopwatch mr-2"></i> Quick Reports</h4>
+        <p class="text-gray-600 text-sm">
+          Fast processing with same-day digital results available for most routine tests.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-sky">
+        <h4 class="font-bold text-xl text-primary-sky mb-1 flex items-center"><i class="fas fa-user-tie mr-2"></i> Experienced Team</h4>
+        <p class="text-gray-600 text-sm">
+          Skilled pathologists and highly trained technicians overseeing every sample.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-sky">
+        <h4 class="font-bold text-xl text-primary-sky mb-1 flex items-center"><i class="fas fa-envelope-open-text mr-2"></i> Digital Reports</h4>
+        <p class="text-gray-600 text-sm">
+          Secure reports delivered directly to your mobile via WhatsApp or Email.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lab Tests -->
+  <section class="max-w-4xl mx-auto px-4 py-8">
+    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 flex items-center"><i class="fas fa-vials text-red-700  mr-2"></i> Popular Available Tests</h3>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+
+      <div class="bg-white p-4 rounded-xl shadow-md transition hover:shadow-lg">
+        <h4 class="font-bold text-gray-800 flex items-center"><i class="fas fa-tint mr-2 text-red-500"></i> Blood Tests</h4>
+        <p class="text-gray-600 mt-1 text-sm">CBC, ESR, Lipid Profile, LFT, RFT, Vitamin D, B12.</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow-md transition hover:shadow-lg">
+        <h4 class="font-bold text-gray-800 flex items-center"><i class="fas fa-toilet mr-2 text-amber-500"></i> Urine Tests</h4>
+        <p class="text-gray-600 mt-1 text-sm">Routine Microscopy, Culture & Sensitivity, Pregnancy Test.</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow-md transition hover:shadow-lg">
+        <h4 class="font-bold text-gray-800 flex items-center"><i class="fas fa-bacteria mr-2 text-green-500"></i> Culture Tests</h4>
+        <p class="text-gray-600 mt-1 text-sm">Blood Culture, Throat Swab, Wound Swab, Sputum Culture.</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow-md transition hover:shadow-lg">
+        <h4 class="font-bold text-gray-800 flex items-center"><i class="fas fa-wave-square mr-2 text-indigo-500"></i> Hormone & Markers</h4>
+        <p class="text-gray-600 mt-1 text-sm">Thyroid Panel (T3, T4, TSH), Cortisol, HbA1c, PSA.</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow-md transition hover:shadow-lg">
+        <h4 class="font-bold text-gray-800 flex items-center"><i class="fas fa-virus mr-2 text-red-700"></i> Infection Markers</h4>
+        <p class="text-gray-600 mt-1 text-sm">CRP, Dengue NS1/IgM, Malaria Antigen, HIV, HBsAg.</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow-md transition hover:shadow-lg">
+        <h4 class="font-bold text-gray-800 flex items-center"><i class="fas fa-hand-holding-heart mr-2 text-pink-500"></i> Wellness Packages</h4>
+        <p class="text-gray-600 mt-1 text-sm">Full body check-ups, cardiac profiles, and senior citizen packages.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lab Timings & CTA -->
+  <section class="px-4 py-12 bg-white shadow-inner mt-8">
+    <div class="max-w-4xl mx-auto">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Lab Timings & Sample Collection</h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="p-6 bg-sky-100 border border-sky-300 rounded-xl text-center shadow">
+                <p class="font-extrabold text-xl text-sky-700 mb-1 flex items-center justify-center"><i class="fas fa-sun mr-2"></i> OPD Lab Timings</p>
+                <p class="text-lg text-gray-700">8:00 AM – 8:00 PM (Daily)</p>
+                <p class="text-sm text-gray-500 mt-1">For routine sample collection and drop-offs.</p>
+            </div>
+
+            <div class="p-6 bg-sky-100 border border-sky-300 rounded-xl text-center shadow">
+                <p class="font-extrabold text-xl text-sky-700 mb-1 flex items-center justify-center"><i class="fas fa-moon mr-2"></i> Emergency Lab</p>
+                <p class="text-lg text-gray-700">24×7 Available</p>
+                <p class="text-sm text-gray-500 mt-1">For all urgent and in-patient testing needs.</p>
+            </div>
+        </div>
+        
+        <h4 class="text-xl font-semibold text-gray-800 mb-3 text-center">Home Sample Collection Service</h4>
+        <p class="text-gray-600 text-center text-md mb-6">
+            Schedule a convenient time for our phlebotomist to collect your sample at home.
+        </p>
+
+        <div class="text-center">
+            <a href="tel:+919876543210"
+                class="bg-primary-sky text-white px-8 py-3 rounded-full font-bold hover:bg-sky-700 inline-block transition shadow-lg hover:shadow-xl">
+                <i class="fas fa-phone-volume mr-2"></i> Call Lab: +91 98765 43210
+            </a>
+        </div>
+    </div>
+  </section>
+</div>
+  <!-- Footer-->
+  <footer class="bg-[#647779] text-gray-200 py-10">
+    <div class="max-w-7xl mx-auto px-6 m-2 flex justify-evenly ml-24">
+
+      <!-- GRID -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24">
+
+
+        <!-- 1. Important Links -->
+        <div>
+          <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+            Important Links
+          </h3>
+          <ul class="text-sm space-y-1">
+            <li><a href="#" class="hover:text-yellow-400">Citizen Charter</a></li>
+            <li><a href="#" class="hover:text-yellow-400">RTI</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Online Donation</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Proactive Disclosure</a></li>
+          </ul>
+        </div>
+
+        <!-- 2. Other Hospitals -->
+        <div>
+          <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+            Other Robin Hospitals
+          </h3>
+          <ul class="text-sm space-y-1">
+            <li><a href="#" class="hover:text-yellow-400">Thoubal</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Kaching</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Senapati</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Moreh</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Legal & Policies -->
+        <div>
+          <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+            Legal & Policies
+          </h3>
+          <ul class="text-sm space-y-1">
+            <li><a href="Terms&Conditions.html" class="hover:text-yellow-400">Terms & Conditions</a></li>
+            <li><a href="PatientGuidelines.html" class="hover:text-yellow-400">Patient Guidelines</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 4. About / Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+            Quick Links
+          </h3>
+          <ul class="text-sm space-y-1">
+            <li><a href="AboutUs.html" class="hover:text-yellow-400">About Us</a></li>
+            <li><a href="Departments&Centers.html" class="hover:text-yellow-400">Departments</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Doctors</a></li>
+            <li><a href="contactUs.html" class="hover:text-yellow-400">Contact Us</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr class=" m-4 border-pink-500 border-t-3 w-[70%] mx-auto p-2">
+
+    <div class="border-t border-gray-500 text-center mt-2 pt-4 Py-1 text-sm text-gray-300">
+      <img src="Dr.logo4.jpg" alt="India logo" class="mx-auto mb-2 w-28  rounded-[100%]">
+
+      <div class="">
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-sky-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-blue-500"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <p>© 2025 Robin Care Hospital, Manipur</p>
+    </div>
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+
+</html>
