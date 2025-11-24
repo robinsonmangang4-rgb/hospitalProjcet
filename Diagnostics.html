@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <title>RCH Pharmacy</title>
+</head>
+
+<body class="bg-gradient-to-r from-teal-500 to-indigo-300">
+  <!-- ================= TOP HEADER ================= -->
+  <div class=" sticky top-0 left-0 w-full z-20 bg-teal-100 border-b-4 border-gray-200">
+
+    <div class="  max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+
+      <!-- LOGO + TITLE -->
+      <div class="flex items-center gap-3">
+        <img src="Dr.logo4.jpg" alt="logo" class="w-16 h-16 rounded-lg object-cover">
+        <div>
+          <h1 class="text-xl text-[#7b1f2a] font-bold">Robin Care Hospital</h1>
+          <p class="text-gray-600 text-sm">Compassion & Excellence</p>
+        </div>
+      </div>
+
+      <!-- DESKTOP RIGHT SIDE -->
+      <div class="hidden lg:flex items-center gap-4 text-sm">
+
+        <div class="text-gray-700 flex items-center gap-2">
+          <a href="opd-appointment.html" class="text-gray-700 hover:text-blue-600"> OPD Appointment </a>
+          <a href="dashboard.html" class="text-gray-700 hover:text-blue-600 m-6"> Dashboard </a>
+        </div>
+
+        <!-- Search -->
+        <div class="relative">
+          <input type="text" placeholder="Search..."
+            class="px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-[#7b1f2a]" />
+          <button class="absolute right-1 top-1 bg-[#7b1f2a] text-white rounded-full px-3 py-1 text-sm">
+            Go
+          </button>
+        </div>
+
+        <a href="Appointments.html"
+          class="bg-[#7b1f2a] hover:bg-[#661821] text-white font-semibold px-4 py-2 rounded-full">
+          Book Appointment
+        </a>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <button id="menuBtn" class="xl:hidden p-2 border rounded-md">
+        <div class="w-6 h-0.5 bg-black mb-1"></div>
+        <div class="w-6 h-0.5 bg-black mb-1"></div>
+        <div class="w-6 h-0.5 bg-black"></div>
+      </button>
+    </div>
+  </div>
+  <div>
+    
+      <!-- ================= DESKTOP NAVBAR ================= -->
+      <nav class="hidden xl:block bg-[#7b1f2a] text-white shadow-md p-0 m-0 ">
+        <div class=" mx-auto flex gap-4 px-4 py-3 justify-evenly">
+          <a href="RobinCareHospitalTailwind.html" class="hover:bg-white/10 px-3 py-2 rounded">Home</a>
+          <a href="AboutUs.html" class="hover:bg-white/10 px-3 py-2 rounded">About Us</a>
+          <a href="Departments&Centers.html" class="hover:bg-white/10 px-3 py-2 rounded">Departments & Centers</a>
+          <a href="Careers.html" class="hover:bg-white/10 px-3 py-2 rounded">Careers</a>
+          <a href="Tenders.html" class="hover:bg-white/10 px-3 py-2 rounded">Tenders</a>
+          <a href="Research.html" class="hover:bg-white/10 px-3 py-2 rounded">Research</a>
+          <a href="Emergency&Casualty.html" class="hover:bg-white/10 px-3 py-2 rounded">Emergency & Casualty</a>
+          <a href="Pharmacy.html" class="over:bg-white/10 px-3 py-2 rounded">Pharmacy</a>
+          <a href="Diagnostics.html" class="over:bg-white/10 px-3 py-2 rounded">Diagnostics</a>
+          <a href="Laboratory.html" class="hover:bg-white/10 px-3 py-2 rounded">Laboratory</a>
+          <a href="Events.html" class="over:bg-white/10 px-3 py-2 rounded">Events</a>
+          <a href="Gallery.html" class="over:bg-white/10 px-3 py-2 rounded">Gallery</a>
+        </div>
+      </nav>
+    <!-- ================= MOBILE MENU ================= -->
+    <div id="mobileMenu" class=" hidden xl:hidden bg-white border-t shadow-md p-5 space-y-6">
+
+      <!-- OPD + Dashboard -->
+      <div class="text-gray-700 flex gap-2 text-sm">
+        <a href="OPDAppointment.html" class="text-gray-700 hover:text-blue-600"> OPD Appointment </a>
+        <a href="dashboard.html" class="text-gray-700 hover:text-blue-600"> Dashboard </a>
+      </div>
+
+      <!-- Search -->
+      <div class="relative">
+        <input type="text" placeholder="Search..."
+          class="w-full px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-[#7b1f2a]" />
+        <button class="absolute right-1 top-1 bg-[#7b1f2a] text-white rounded-full px-3 py-1 text-sm">Go</button>
+      </div>
+
+      <!-- MOBILE NAV LINKS -->
+      <div class="flex flex-col text-gray-800 text-base space-y-3">
+
+        <a href="RobinCareHospitalTailwind.html" class="hover:text-[#7b1f2a] font-medium">Home</a>
+        <a href="AboutUs.html" class="hover:text-[#7b1f2a] font-medium">About Us</a>
+        <a href="Departments&Centers.html" class="hover:text-[#7b1f2a] font-medium">Departments & Centers</a>
+        <a href="Careers.html" class="hover:text-[#7b1f2a] font-medium">Careers</a>
+        <a href="Tenders.html" class="hover:text-[#7b1f2a] font-medium">Tenders</a>
+        <a href="Research.html" class="hover:text-[#7b1f2a] font-medium">Research</a>
+        <a href="Emergency&Casualty.html" class="hover:text-[#7b1f2a] font-medium">Emergency & Casualty</a>
+        <a href="Pharmacy.html" class="hover:text-[#7b1f2a] font-medium">Pharmacy</a>
+        <a href="Diagnostics.html" class="hover:text-[#7b1f2a] font-medium">Diagnostics</a>
+        <a href="Laboratory.html" class="hover:text-[#7b1f2a] font-medium">Laboratory</a>
+        <a href="Events.html" class="hover:text-[#7b1f2a] font-medium">Events</a>
+        <a href="Gallery.html" class="hover:text-[#7b1f2a] font-medium">Gallery</a>
+      </div>
+
+      <!-- Appointment Button -->
+      <a href="Appointments.html"
+        class="block text-center bg-[#7b1f2a] hover:bg-[#661821] text-white font-semibold px-4 py-2 rounded-full">
+        Book Appointment
+      </a>
+    </div>
+  </div>
+
+<!-- hero -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robin Care Hospital - Diagnostics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+    .text-hospital-blue {
+        color: #0ea5e9; /* Sky 500 for consistency */
+    }
+    .bg-hospital-blue {
+        background-color: #0ea5e9;
+    }
+    .hover\:bg-hospital-blue-dark:hover {
+        background-color: #0284c7; /* Sky 700 */
+    }
+  </style>
+  <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'primary-sky': '#0ea5e9', /* Sky 500 */
+                },
+            }
+        }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-primary-sky text-white py-6 shadow-lg">
+    <div class="flex justify-center items-center">
+        <i class="fa-solid fa-flask text-3xl mr-3 hidden sm:inline-block"></i>
+        <h1 class="text-3xl font-bold text-center">Diagnostics & Laboratory Services</h1>
+    </div>
+    <p class="text-center text-lg mt-1">Robin Care Hospital</p>
+  </header>
+  
+  <!-- Intro Section -->
+  <section class="max-w-5xl mx-auto mt-8 p-6 bg-white shadow-xl rounded-2xl border-l-8 border-primary-sky">
+    <div class="flex flex-col md:flex-row items-center gap-6">
+      <i class="fa-solid fa-microscope text-primary-sky text-6xl"></i>
+      <div>
+        <h2 class="text-2xl font-bold">Accurate & Advanced Diagnostics</h2>
+        <p class="text-gray-700 mt-2">Our diagnostic center is equipped with modern, NABL-certified technology to ensure precise and fast results for timely treatment and better patient care.</p>
+        <p class="text-sm text-gray-500 mt-1">Open 7 days a week, 8:00 AM - 8:00 PM.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Diagnostic Services -->
+  <section class="max-w-5xl mx-auto mt-8 p-6 bg-white shadow-xl rounded-2xl">
+    <h2 class="text-2xl font-bold mb-6 text-primary-sky border-b pb-2">Our Diagnostic Services</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  
+        <div class="flex flex-col items-center p-5 bg-sky-50 border border-sky-200 rounded-xl shadow-md transition hover:shadow-lg">
+            <i class="fa-solid fa-vials text-primary-sky text-3xl mb-2"></i>
+            <p class="font-semibold text-center">Pathology (Blood, Urine, Culture)</p>
+        </div>
+
+        <div class="flex flex-col items-center p-5 bg-sky-50 border border-sky-200 rounded-xl shadow-md transition hover:shadow-lg">
+            <i class="fa-solid fa-x-ray text-primary-sky text-3xl mb-2"></i>
+            <p class="font-semibold text-center">Digital X-Ray & Imaging</p>
+        </div>
+
+        <div class="flex flex-col items-center p-5 bg-sky-50 border border-sky-200 rounded-xl shadow-md transition hover:shadow-lg">
+            <i class="fa-solid fa-wave-square text-primary-sky text-3xl mb-2"></i>
+            <p class="font-semibold text-center">ECG & Cardiac Diagnostics</p>
+        </div>
+
+        <div class="flex flex-col items-center p-5 bg-sky-50 border border-sky-200 rounded-xl shadow-md transition hover:shadow-lg">
+            <i class="fa-solid fa-syringe text-primary-sky text-3xl mb-2"></i>
+            <p class="font-semibold text-center">Hormone & Thyroid Tests</p>
+        </div>
+
+        <div class="flex flex-col items-center p-5 bg-sky-50 border border-sky-200 rounded-xl shadow-md transition hover:shadow-lg">
+            <i class="fa-solid fa-dna text-primary-sky text-3xl mb-2"></i>
+            <p class="font-semibold text-center">Molecular & Genetic Testing</p>
+        </div>
+
+        <div class="flex flex-col items-center p-5 bg-sky-50 border border-sky-200 rounded-xl shadow-md transition hover:shadow-lg">
+            <i class="fa-solid fa-lungs text-primary-sky text-3xl mb-2"></i>
+            <p class="font-semibold text-center">Pulmonary Function Tests</p>
+        </div>
+    </div>
+  </section>
+  
+  <!-- Why Choose Us -->
+  <section class="max-w-5xl mx-auto mt-8 p-6 bg-white shadow-xl rounded-2xl">
+    <h2 class="text-2xl font-bold mb-4">Why Choose Our Diagnostics?</h2>
+    <ul class="space-y-3 text-gray-700">
+      <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-primary-sky mt-1 pt-1"></i> *Certified Quality:* NABL accredited laboratory ensures international standards of quality.</li>
+      <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-primary-sky mt-1 pt-1"></i> *Expert Team:* Highly trained technicians & certified pathologists review every report.</li>
+      <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-primary-sky mt-1 pt-1"></i> *Quick Results:* Efficient processing and digital report delivery for timely treatment.</li>
+      <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-primary-sky mt-1 pt-1"></i> *Home Sample Collection:* Convenient service available across the city.</li>
+      <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-primary-sky mt-1 pt-1"></i> *Affordable Packages:* Comprehensive health check-up packages designed for all ages.</li>
+    </ul>
+  </section>
+  
+  <!-- Book Test CTA -->
+  <section class="max-w-5xl mx-auto mt-8 mb-10 p-8 bg-primary-sky/10 shadow-xl rounded-2xl text-center border-t-4 border-primary-sky">
+    <h2 class="text-2xl font-bold mb-3 text-gray-800">Ready to Book a Test?</h2>
+    <p class="text-gray-700 mb-6">Call our diagnostic center directly for booking, package details, or home sample collection appointments.</p>
+    <a href="tel:9999999999" class="inline-block bg-primary-sky text-white px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:bg-hover-sky-dark transition transform hover:scale-[1.01]">
+      <i class="fa-solid fa-phone-volume mr-2"></i> Call Diagnostics Now (9999 999 999)
+    </a>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-600 py-6 bg-white mt-10 shadow-inner">
+    © 2025 Robin Care Hospital — Diagnostics Department | Excellence in Medical Reporting
+  </footer>
+</body>
+</html>
+
+
+  <!-- Footer-->
+  <footer class="bg-[#647779] text-gray-200 py-10">
+    <div class="max-w-7xl mx-auto px-6 m-2 flex justify-evenly ml-24">
+
+      <!-- GRID -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24">
+
+
+        <!-- 1. Important Links -->
+        <div>
+          <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+            Important Links
+          </h3>
+          <ul class="text-sm space-y-1">
+            <li><a href="#" class="hover:text-yellow-400">Citizen Charter</a></li>
+            <li><a href="#" class="hover:text-yellow-400">RTI</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Online Donation</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Proactive Disclosure</a></li>
+          </ul>
+        </div>
+
+        <!-- 2. Other Hospitals -->
+        <div>
+          <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+            Other Robin Hospitals
+          </h3>
+          <ul class="text-sm space-y-1">
+            <li><a href="#" class="hover:text-yellow-400">Thoubal</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Kaching</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Senapati</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Moreh</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Legal & Policies -->
+        <div>
+          <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+            Legal & Policies
+          </h3>
+          <ul class="text-sm space-y-1">
+            <li><a href="Terms&Conditions.html" class="hover:text-yellow-400">Terms & Conditions</a></li>
+            <li><a href="PatientGuidelines.html" class="hover:text-yellow-400">Patient Guidelines</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 4. About / Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+            Quick Links
+          </h3>
+          <ul class="text-sm space-y-1">
+            <li><a href="AboutUs.html" class="hover:text-yellow-400">About Us</a></li>
+            <li><a href="Departments&Centers.html" class="hover:text-yellow-400">Departments</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Doctors</a></li>
+            <li><a href="contactUs.html" class="hover:text-yellow-400">Contact Us</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr class=" m-4 border-pink-500 border-t-3 w-[70%] mx-auto p-2">
+
+    <div class="border-t border-gray-500 text-center mt-2 pt-4 Py-1 text-sm text-gray-300">
+      <img src="Dr.logo4.jpg" alt="India logo" class="mx-auto mb-2 w-28  rounded-[100%]">
+
+      <div class="">
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-sky-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-blue-500"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <p>© 2025 Robin Care Hospital, Manipur</p>
+    </div>
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+
+</html>
