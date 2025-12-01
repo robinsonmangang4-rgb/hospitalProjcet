@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <title>RCH Registration</title>
+
+    <style>
+        /* A hypothetical brand color for Robin Care (Teal-ish blue) */
+        .text-robin {
+            color: #2c7a7b;
+        }
+
+        .border-robin {
+            border-color: #2c7a7b;
+        }
+
+        .bg-robin {
+            background-color: #2c7a7b;
+        }
+
+        .hover\:bg-robin-dark:hover {
+            background-color: #245e5f;
+        }
+
+        /* Style for the active selector tab/label */
+        .radio-checked:checked+label {
+            background-color: #2c7a7b;
+            color: white;
+            border-color: #2c7a7b;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-teal-500 to-indigo-300">
+  <!-- ================= TOP HEADER ================= -->
+  <div class=" sticky top-0 left-0 w-full z-20 bg-teal-100 border-b-4 border-gray-200">
+
+    <div class="  max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+
+      <!-- LOGO + TITLE -->
+      <div class="flex items-center gap-3">
+        <img src="Dr.logo4.jpg" alt="logo" class="w-16 h-16 rounded-lg object-cover">
+        <div>
+          <h1 class="text-xl text-[#7b1f2a] font-bold">Robin Care Hospital</h1>
+          <p class="text-gray-600 text-sm">Compassion & Excellence</p>
+        </div>
+      </div>
+
+      <!-- DESKTOP RIGHT SIDE -->
+      <div class="hidden lg:flex items-center gap-4 text-sm">
+
+        <div class="text-gray-700 flex items-center gap-2">
+          <a href="opd-appointment.html" class="text-gray-700 hover:text-blue-600"> OPD Appointment </a>
+          <a href="dashboard.html" class="text-gray-700 hover:text-blue-600 m-6"> Dashboard </a>
+        </div>
+
+        <!-- Search -->
+        <div class="relative">
+          <input type="text" placeholder="Search..."
+            class="px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-[#7b1f2a]" />
+          <button class="absolute right-1 top-1 bg-[#7b1f2a] text-white rounded-full px-3 py-1 text-sm">
+            Go
+          </button>
+        </div>
+
+        <a href="Appointments.html"
+          class="bg-[#7b1f2a] hover:bg-[#661821] text-white font-semibold px-4 py-2 rounded-full">
+          Book Appointment
+        </a>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <button id="menuBtn" class="xl:hidden p-2 border rounded-md">
+        <div class="w-6 h-0.5 bg-black mb-1"></div>
+        <div class="w-6 h-0.5 bg-black mb-1"></div>
+        <div class="w-6 h-0.5 bg-black"></div>
+      </button>
+    </div>
+  </div>
+  <div>
+    
+      <!-- ================= DESKTOP NAVBAR ================= -->
+      <nav class="hidden xl:block bg-[#7b1f2a] text-white shadow-md p-0 m-0 ">
+        <div class=" mx-auto flex gap-4 px-4 py-3 justify-evenly">
+          <a href="RobinCareHospitalTailwind.html" class="hover:bg-white/10 px-3 py-2 rounded">Home</a>
+          <a href="AboutUs.html" class="hover:bg-white/10 px-3 py-2 rounded">About Us</a>
+          <a href="Departments&Centers.html" class="hover:bg-white/10 px-3 py-2 rounded">Departments & Centers</a>
+          <a href="Careers.html" class="hover:bg-white/10 px-3 py-2 rounded">Careers</a>
+          <a href="Tenders.html" class="hover:bg-white/10 px-3 py-2 rounded">Tenders</a>
+          <a href="Research.html" class="hover:bg-white/10 px-3 py-2 rounded">Research</a>
+          <a href="Emergency&Casualty.html" class="hover:bg-white/10 px-3 py-2 rounded">Emergency & Casualty</a>
+          <a href="Pharmacy.html" class="over:bg-white/10 px-3 py-2 rounded">Pharmacy</a>
+          <a href="Diagnostics.html" class="over:bg-white/10 px-3 py-2 rounded">Diagnostics</a>
+          <a href="Laboratory.html" class="hover:bg-white/10 px-3 py-2 rounded">Laboratory</a>
+          <a href="Events.html" class="over:bg-white/10 px-3 py-2 rounded">Events</a>
+          <a href="Gallery.html" class="over:bg-white/10 px-3 py-2 rounded">Gallery</a>
+        </div>
+      </nav>
+    <!-- ================= MOBILE MENU ================= -->
+    <div id="mobileMenu" class=" hidden xl:hidden bg-white border-t shadow-md p-5 space-y-6">
+
+      <!-- OPD + Dashboard -->
+      <div class="text-gray-700 flex gap-2 text-sm">
+        <a href="OPDAppointment.html" class="text-gray-700 hover:text-blue-600"> OPD Appointment </a>
+        <a href="dashboard.html" class="text-gray-700 hover:text-blue-600"> Dashboard </a>
+      </div>
+
+      <!-- Search -->
+      <div class="relative">
+        <input type="text" placeholder="Search..."
+          class="w-full px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-[#7b1f2a]" />
+        <button class="absolute right-1 top-1 bg-[#7b1f2a] text-white rounded-full px-3 py-1 text-sm">Go</button>
+      </div>
+
+      <!-- MOBILE NAV LINKS -->
+      <div class="flex flex-col text-gray-800 text-base space-y-3">
+
+        <a href="RobinCareHospitalTailwind.html" class="hover:text-[#7b1f2a] font-medium">Home</a>
+        <a href="AboutUs.html" class="hover:text-[#7b1f2a] font-medium">About Us</a>
+        <a href="Departments&Centers.html" class="hover:text-[#7b1f2a] font-medium">Departments & Centers</a>
+        <a href="Careers.html" class="hover:text-[#7b1f2a] font-medium">Careers</a>
+        <a href="Tenders.html" class="hover:text-[#7b1f2a] font-medium">Tenders</a>
+        <a href="Research.html" class="hover:text-[#7b1f2a] font-medium">Research</a>
+        <a href="Emergency&Casualty.html" class="hover:text-[#7b1f2a] font-medium">Emergency & Casualty</a>
+        <a href="Pharmacy.html" class="hover:text-[#7b1f2a] font-medium">Pharmacy</a>
+        <a href="Diagnostics.html" class="hover:text-[#7b1f2a] font-medium">Diagnostics</a>
+        <a href="Laboratory.html" class="hover:text-[#7b1f2a] font-medium">Laboratory</a>
+        <a href="Events.html" class="hover:text-[#7b1f2a] font-medium">Events</a>
+        <a href="Gallery.html" class="hover:text-[#7b1f2a] font-medium">Gallery</a>
+      </div>
+
+      <!-- Appointment Button -->
+      <a href="Appointments.html"
+        class="block text-center bg-[#7b1f2a] hover:bg-[#661821] text-white font-semibold px-4 py-2 rounded-full">
+        Book Appointment
+      </a>
+    </div>
+  </div>
+
+<div class=" flex items-center justify-center min-h-screen mt-5 mb-5 bg-transparent">
+
+    <div class="w-full max-w-2xl p-8 space-y-8 bg-gradient-to-r from-rose-400 to-sky-500 rounded-xl shadow-2xl">
+
+        <div class="text-center">
+            <svg class="w-16 h-16 mx-auto text-robin" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20v-2c0-.523-.099-1.03-.254-1.554M17 20H2C3.856 18.067 6.138 17 8.5 17c3.84 0 7.68 1.437 10.15 3L17 20zM21.5 10.5a3 3 0 11-6 0 3 3 0 016 0z">
+                </path>
+            </svg>
+            <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
+                Hospital Portal Registration
+            </h2>
+            <p class="mt-2 text-sm text-gray-600">
+                Sign up as a Patient or an Employee
+            </p>
+        </div>
+
+        <form class="mt-8 space-y-6" action="#" method="POST">
+
+            <div class="flex justify-center mb-6">
+                <input type="radio" id="register-patient" name="user-type" value="patient" checked
+                    class="hidden radio-checked">
+                <label for="register-patient"
+                    class="cursor-pointer px-6 py-2 border border-gray-300 rounded-l-lg text-sm font-medium text-gray-700 transition duration-150 ease-in-out hover:bg-gray-100"
+                    onclick="document.getElementById('patient-form-fields').classList.remove('hidden'); document.getElementById('employee-form-fields').classList.add('hidden');">
+                    Patient Registration
+                </label>
+
+                <input type="radio" id="register-employee" name="user-type" value="employee"
+                    class="hidden radio-checked">
+                <label for="register-employee"
+                    class="cursor-pointer px-6 py-2 border border-gray-300 rounded-r-lg text-sm font-medium text-gray-700 transition duration-150 ease-in-out hover:bg-gray-100"
+                    onclick="document.getElementById('patient-form-fields').classList.add('hidden'); document.getElementById('employee-form-fields').classList.remove('hidden');">
+                    Employee Registration
+                </label>
+            </div>
+
+
+            <div id="patient-form-fields" class="space-y-4 border p-4 rounded-lg border-gray-200">
+                <h3 class="text-xl font-semibold text-robin">Patient Details</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="p-full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input id="p-full-name" name="p-full-name" type="text" autocomplete="name" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-robin focus:border-robin sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="p-mobile-number" class="block text-sm font-medium text-gray-700">Mobile
+                            Number</label>
+                        <input id="p-mobile-number" name="p-mobile-number" type="tel" autocomplete="tel" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-robin focus:border-robin sm:text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="p-email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input id="p-email" name="p-email" type="email" autocomplete="email" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-robin focus:border-robin sm:text-sm">
+                </div>
+
+                <div>
+                    <label for="p-address" class="block text-sm font-medium text-gray-700">Residential Address</label>
+                    <textarea id="p-address" name="p-address" rows="2" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-robin focus:border-robin sm:text-sm"></textarea>
+                </div>
+            </div>
+
+            <div id="employee-form-fields" class="space-y-4 hidden border p-4 rounded-lg border-gray-200">
+                <h3 class="text-xl font-semibold text-robin">Employee Details</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="e-employee-id" class="block text-sm font-medium text-gray-700">Employee ID</label>
+                        <input id="e-employee-id" name="e-employee-id" type="text" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-robin focus:border-robin sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="e-designation" class="block text-sm font-medium text-gray-700">Role /
+                            Designation</label>
+                        <select id="e-designation" name="e-designation" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:ring-robin focus:border-robin sm:text-sm">
+                            <option value="">Select Role...</option>
+                            <option value="physician">Physician / Doctor</option>
+                            <option value="nurse">Nurse</option>
+                            <option value="admin">Administrator / Staff</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="e-department" class="block text-sm font-medium text-gray-700">Department</label>
+                    <select id="e-department" name="e-department" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:ring-robin focus:border-robin sm:text-sm">
+                        <option value="">Select Department...</option>
+                        <option value="cardio">Cardiology</option>
+                        <option value="ortho">Orthopedics</option>
+                        <option value="icu">ICU / Emergency</option>
+                        <option value="billing">Administration/Billing</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="space-y-4 pt-4 border-t border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-700">Account Security</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700">Set Password</label>
+                        <input id="password" name="password" type="password" autocomplete="new-password" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-robin focus:border-robin sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm
+                            Password</label>
+                        <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password"
+                            required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-robin focus:border-robin sm:text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-4">
+                <button type="submit"
+                    class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-lg font-medium rounded-md text-white bg-robin hover:bg-robin-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-robin">
+                    Create Account
+                </button>
+            </div>
+
+            <div class="text-center pt-2">
+                <p class="text-sm text-gray-600">
+                    Already registered?
+                    <a href="#" class="font-medium text-robin hover:text-robin-dark">
+                        Log in here
+                    </a>
+                </p>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+<!-- Footer-->
+<footer class="bg-[#647779] text-gray-200 py-10">
+    <div class="max-w-7xl mx-auto px-6 m-2 flex justify-evenly ml-24">
+
+        <!-- GRID -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24">
+
+
+            <!-- 1. Important Links -->
+            <div>
+                <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                    Important Links
+                </h3>
+                <ul class="text-sm space-y-1">
+                    <li><a href="#" class="hover:text-yellow-400">Citizen Charter</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">RTI</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Online Donation</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Proactive Disclosure</a></li>
+                </ul>
+            </div>
+
+            <!-- 2. Other Hospitals -->
+            <div>
+                <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                    Other Robin Hospitals
+                </h3>
+                <ul class="text-sm space-y-1">
+                    <li><a href="#" class="hover:text-yellow-400">Thoubal</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Kaching</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Senapati</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Moreh</a></li>
+                </ul>
+            </div>
+
+            <!-- 3. Legal & Policies -->
+            <div>
+                <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                    Legal & Policies
+                </h3>
+                <ul class="text-sm space-y-1">
+                    <li><a href="Terms&Conditions.html" class="hover:text-yellow-400">Terms & Conditions</a></li>
+                    <li><a href="PatientGuidelines.html" class="hover:text-yellow-400">Patient Guidelines</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 4. About / Quick Links -->
+            <div>
+                <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+                    Quick Links
+                </h3>
+                <ul class="text-sm space-y-1">
+                    <li><a href="AboutUs.html" class="hover:text-yellow-400">About Us</a></li>
+                    <li><a href="Departments&Centers.html" class="hover:text-yellow-400">Departments</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Doctors</a></li>
+                    <li><a href="contactUs.html" class="hover:text-yellow-400">Contact Us</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class=" m-4 border-pink-500 border-t-3 w-[70%] mx-auto p-2">
+
+    <div class="border-t border-gray-500 text-center mt-2 pt-4 Py-1 text-sm text-gray-300">
+        <img src="Dr.logo4.jpg" alt="India logo" class="mx-auto mb-2 w-28  rounded-[100%]">
+
+        <div class="">
+            <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-sky-400"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-blue-500"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <p>© 2025 Robin Care Hospital, Manipur</p>
+    </div>
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+    // NOTE: The switching logic is handled by the inline onclick attributes for simplicity
+    // as you requested minimal JS. For better practice, you would use event listeners.
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const patientRadio = document.getElementById('register-patient');
+        const employeeRadio = document.getElementById('register-employee');
+        const patientFields = document.getElementById('patient-form-fields');
+        const employeeFields = document.getElementById('employee-form-fields');
+
+        function toggleFields() {
+            if (patientRadio.checked) {
+                patientFields.classList.remove('hidden');
+                employeeFields.classList.add('hidden');
+            } else if (employeeRadio.checked) {
+                patientFields.classList.add('hidden');
+                employeeFields.classList.remove('hidden');
+            }
+        }
+
+        // Bind the toggle function to the radio buttons
+        patientRadio.addEventListener('change', toggleFields);
+        employeeRadio.addEventListener('change', toggleFields);
+
+        // Initial check in case the default checked state is loaded differently
+        toggleFields();
+    });
+</script>
+</body>
+
+</html>
