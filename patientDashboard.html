@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>RCH Patient Dashboard</title>
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/CD/JpSLJ8F4EeRz3UjRYR0YF9+3zT1v3gYv9g1D9M70s7v+1kE3Wk4Jg4n4A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0fdf4;
+      /* Very light green/mint background */
+      --color-hospital-primary: #7b1f2a;
+      /* Custom primary color */
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-r from-teal-500 to-indigo-300">
+  <!-- ================= TOP HEADER ================= -->
+  <div class=" sticky top-0 left-0 w-full z-20 bg-teal-100 border-b-4 border-gray-200">
+
+    <div class="  max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+
+      <!-- LOGO + TITLE -->
+      <div class="flex items-center gap-3">
+        <img src="Dr.logo4.jpg" alt="logo" class="w-16 h-16 rounded-lg object-cover">
+        <div>
+          <h1 class="text-xl text-[#7b1f2a] font-bold">Robin Care Hospital</h1>
+          <p class="text-gray-600 text-sm">Compassion & Excellence</p>
+        </div>
+      </div>
+
+      <!-- DESKTOP RIGHT SIDE -->
+      <div class="hidden lg:flex items-center gap-4 text-sm">
+
+        <div class="text-gray-700 flex items-center gap-2">
+          <a href="opd-appointment.html" class="text-gray-700 hover:text-blue-600"> OPD Appointment </a>
+          <a href="dashboard.html" class="text-gray-700 hover:text-blue-600 m-6"> Dashboard </a>
+        </div>
+
+        <!-- Search -->
+        <div class="relative">
+          <input type="text" placeholder="Search..."
+            class="px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-[#7b1f2a]" />
+          <button class="absolute right-1 top-1 bg-[#7b1f2a] text-white rounded-full px-3 py-1 text-sm">
+            Go
+          </button>
+        </div>
+
+        <a href="Appointments.html"
+          class="bg-[#7b1f2a] hover:bg-[#661821] text-white font-semibold px-4 py-2 rounded-full">
+          Book Appointment
+        </a>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <button id="menuBtn" class="xl:hidden p-2 border rounded-md">
+        <div class="w-6 h-0.5 bg-black mb-1"></div>
+        <div class="w-6 h-0.5 bg-black mb-1"></div>
+        <div class="w-6 h-0.5 bg-black"></div>
+      </button>
+    </div>
+  </div>
+  <div>
+
+    <!-- ================= DESKTOP NAVBAR ================= -->
+    <nav class="hidden xl:block bg-[#7b1f2a] text-white shadow-md p-0 m-0 ">
+      <div class=" mx-auto flex gap-4 px-4 py-3 justify-evenly">
+        <a href="RobinCareHospitalTailwind.html" class="hover:bg-white/10 px-3 py-2 rounded">Home</a>
+        <a href="AboutUs.html" class="hover:bg-white/10 px-3 py-2 rounded">About Us</a>
+        <a href="Departments&Centers.html" class="hover:bg-white/10 px-3 py-2 rounded">Departments & Centers</a>
+        <a href="Careers.html" class="hover:bg-white/10 px-3 py-2 rounded">Careers</a>
+        <a href="Tenders.html" class="hover:bg-white/10 px-3 py-2 rounded">Tenders</a>
+        <a href="Research.html" class="hover:bg-white/10 px-3 py-2 rounded">Research</a>
+        <a href="Emergency&Casualty.html" class="hover:bg-white/10 px-3 py-2 rounded">Emergency & Casualty</a>
+        <a href="Pharmacy.html" class="over:bg-white/10 px-3 py-2 rounded">Pharmacy</a>
+        <a href="Diagnostics.html" class="over:bg-white/10 px-3 py-2 rounded">Diagnostics</a>
+        <a href="Laboratory.html" class="hover:bg-white/10 px-3 py-2 rounded">Laboratory</a>
+        <a href="Events.html" class="over:bg-white/10 px-3 py-2 rounded">Events</a>
+        <a href="Gallery.html" class="over:bg-white/10 px-3 py-2 rounded">Gallery</a>
+      </div>
+    </nav>
+    <!-- ================= MOBILE MENU ================= -->
+    <div id="mobileMenu" class=" hidden xl:hidden bg-white border-t shadow-md p-5 space-y-6">
+
+      <!-- OPD + Dashboard -->
+      <div class="text-gray-700 flex gap-2 text-sm">
+        <a href="OPDAppointment.html" class="text-gray-700 hover:text-blue-600"> OPD Appointment </a>
+        <a href="dashboard.html" class="text-gray-700 hover:text-blue-600"> Dashboard </a>
+      </div>
+
+      <!-- Search -->
+      <div class="relative">
+        <input type="text" placeholder="Search..."
+          class="w-full px-4 py-2 border rounded-full outline-none focus:ring-2 focus:ring-[#7b1f2a]" />
+        <button class="absolute right-1 top-1 bg-[#7b1f2a] text-white rounded-full px-3 py-1 text-sm">Go</button>
+      </div>
+
+      <!-- MOBILE NAV LINKS -->
+      <div class="flex flex-col text-gray-800 text-base space-y-3">
+
+        <a href="RobinCareHospitalTailwind.html" class="hover:text-[#7b1f2a] font-medium">Home</a>
+        <a href="AboutUs.html" class="hover:text-[#7b1f2a] font-medium">About Us</a>
+        <a href="Departments&Centers.html" class="hover:text-[#7b1f2a] font-medium">Departments & Centers</a>
+        <a href="Careers.html" class="hover:text-[#7b1f2a] font-medium">Careers</a>
+        <a href="Tenders.html" class="hover:text-[#7b1f2a] font-medium">Tenders</a>
+        <a href="Research.html" class="hover:text-[#7b1f2a] font-medium">Research</a>
+        <a href="Emergency&Casualty.html" class="hover:text-[#7b1f2a] font-medium">Emergency & Casualty</a>
+        <a href="Pharmacy.html" class="hover:text-[#7b1f2a] font-medium">Pharmacy</a>
+        <a href="Diagnostics.html" class="hover:text-[#7b1f2a] font-medium">Diagnostics</a>
+        <a href="Laboratory.html" class="hover:text-[#7b1f2a] font-medium">Laboratory</a>
+        <a href="Events.html" class="hover:text-[#7b1f2a] font-medium">Events</a>
+        <a href="Gallery.html" class="hover:text-[#7b1f2a] font-medium">Gallery</a>
+      </div>
+
+      <!-- Appointment Button -->
+      <a href="Appointments.html"
+        class="block text-center bg-[#7b1f2a] hover:bg-[#661821] text-white font-semibold px-4 py-2 rounded-full">
+        Book Appointment
+      </a>
+    </div>
+  </div>
+
+  <div class="min-h-screen">
+
+    <!-- ================= PATIENT DASHBOARD ================= -->
+    <section class="max-w-7xl mx-auto px-6 py-10">
+
+      <!-- Header -->
+      <div class="bg-white/90 p-6 rounded-2xl shadow-xl flex justify-between items-center border-b-4 border-teal-400">
+        <div>
+          <h2 class="text-3xl font-bold text-[#7b1f2a]">Welcome, Tomba Thangjam</h2>
+          <p class="text-gray-600 text-sm">Your personalized health dashboard</p>
+        </div>
+
+        <!-- Placeholder Avatar -->
+        <img src="Dr.Robin2.jpg"
+          onerror="this.onerror=null;this.src='https://placehold.co/64x64/7b1f2a/ffffff?text=AJ'"
+          class="w-16 h-16 rounded-full border-4 border-[#7b1f2a] shadow-md object-cover" alt="Patient Avatar">
+      </div>
+
+      <!-- Stats -->
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+
+        <!-- Stat Card: Appointments -->
+        <div onclick="handleClick('Appointments', 'You are viewing your appointment history and booking options.')"
+          class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-[#7b1f2a] cursor-pointer hover:shadow-2xl transition transform hover:-translate-y-0.5">
+          <i class="fa-solid fa-calendar-check text-3xl text-[#7b1f2a]"></i>
+          <h3 class="mt-3 text-xl font-semibold">Appointments</h3>
+          <p class="text-gray-600">View & manage your bookings</p>
+        </div>
+
+        <!-- Stat Card: Reports -->
+        <div onclick="handleClick('Reports', 'Downloading your latest blood work and scan reports.')"
+          class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-indigo-500 cursor-pointer hover:shadow-2xl transition transform hover:-translate-y-0.5">
+          <i class="fa-solid fa-file-medical text-3xl text-indigo-600"></i>
+          <h3 class="mt-3 text-xl font-semibold">Reports</h3>
+          <p class="text-gray-600">Download lab & scan reports</p>
+        </div>
+
+        <!-- Stat Card: Medicines -->
+        <div onclick="handleClick('Medicines', 'You are accessing the online hospital pharmacy to order refills.')"
+          class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-green-600 cursor-pointer hover:shadow-2xl transition transform hover:-translate-y-0.5">
+          <i class="fa-solid fa-pills text-3xl text-green-600"></i>
+          <h3 class="mt-3 text-xl font-semibold">Medicines</h3>
+          <p class="text-gray-600">Buy medicines online</p>
+        </div>
+
+        <!-- Stat Card: Billing -->
+        <div onclick="handleClick('Billing', 'Checking your account ledger and payment history.')"
+          class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-yellow-500 cursor-pointer hover:shadow-2xl transition transform hover:-translate-y-0.5">
+          <i class="fa-solid fa-file-invoice text-3xl text-yellow-500"></i>
+          <h3 class="mt-3 text-xl font-semibold">Billing</h3>
+          <p class="text-gray-600">Billing history & downloads</p>
+        </div>
+
+      </div>
+
+      <!-- Upcoming Appointment -->
+      <div class="mt-12 bg-white p-8 rounded-2xl shadow-2xl border-l-8 border-[#7b1f2a]">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Upcoming Appointment</h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-lg">
+          <p class="text-gray-700">Doctor: <span class="font-bold">Dr. Johnson</span></p>
+          <p class="text-gray-700">Department: <span class="font-bold">Cardiology</span></p>
+          <p class="text-gray-700">Date: <span class="font-bold text-[#7b1f2a]">Jan 30, 2025</span></p>
+          <p class="text-gray-700">Time: <span class="font-bold text-teal-600">10:30 AM</span></p>
+        </div>
+
+
+        <!-- Button: Reschedule -->
+        <button
+          onclick="handleClick('Reschedule Appointment', 'Opening the tool to modify your appointment time or date.')"
+          class="mt-6 bg-[#7b1f2a] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#661821] shadow-md transition-colors">
+          Reschedule
+        </button>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+
+        <!-- Action Link: Book Appointment -->
+        <a href="#"
+          onclick="event.preventDefault(); handleClick('Book New Appointment', 'Initiating a new appointment request.')"
+          class="bg-[#7b1f2a] text-white py-4 rounded-xl text-center font-bold shadow-lg hover:bg-[#661821] transition transform hover:scale-[1.02]">
+          Book Appointment
+        </a>
+
+        <!-- Action Link: Lab Reports -->
+        <a href="#"
+          onclick="event.preventDefault(); handleClick('View Lab Reports', 'Accessing secure downloads for your test results.')"
+          class="bg-indigo-600 text-white py-4 rounded-xl text-center font-bold shadow-lg hover:bg-indigo-700 transition transform hover:scale-[1.02]">
+          Lab Reports
+        </a>
+
+        <!-- Action Link: Pharmacy -->
+        <a href="#"
+          onclick="event.preventDefault(); handleClick('Visit Pharmacy', 'Redirecting to the online pharmacy store.')"
+          class="bg-green-600 text-white py-4 rounded-xl text-center font-bold shadow-lg hover:bg-green-700 transition transform hover:scale-[1.02]">
+          Pharmacy
+        </a>
+
+        <!-- Action Link: Edit Profile -->
+        <a href="#"
+          onclick="event.preventDefault(); handleClick('Edit Profile', 'Opening your profile settings to update personal details.')"
+          class="bg-gray-600 text-white py-4 rounded-xl text-center font-bold shadow-lg hover:bg-gray-700 transition transform hover:scale-[1.02]">
+          Edit Profile
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Custom Modal/Lightbox for Interaction Feedback -->
+    <div id="customModal"
+      class="fixed inset-0 bg-black bg-opacity-40 hidden items-center justify-center z-50 transition-opacity duration-300 opacity-0"
+      onclick="closeModal(event)">
+      <div
+        class="bg-white p-8 rounded-xl shadow-2xl max-w-sm w-full mx-4 transform scale-95 transition-transform duration-300 border-t-4 border-[#7b1f2a]"
+        onclick="event.stopPropagation()">
+        <div class="flex items-center space-x-3 mb-4">
+          <span class="text-[#7b1f2a] text-3xl"><i class="fa-solid fa-hospital-user"></i></span>
+          <h3 id="modalTitle" class="text-xl font-bold text-gray-800">Action</h3>
+        </div>
+        <p id="modalBody" class="text-sm text-gray-600 mb-6">Placeholder for action.</p>
+        <button onclick="hideModal()"
+          class="w-full bg-[#7b1f2a] text-white py-2 rounded-lg font-semibold hover:bg-[#661821] transition">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer-->
+  <footer class="bg-[#647779] text-gray-200 py-10">
+    <div class="max-w-7xl mx-auto px-6 m-2 flex justify-evenly ml-24">
+
+      <!-- GRID -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-24">
+
+
+        <!-- 1. Important Links -->
+        <div>
+          <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+            Important Links
+          </h3>
+          <ul class="text-sm space-y-1">
+            <li><a href="#" class="hover:text-yellow-400">Citizen Charter</a></li>
+            <li><a href="#" class="hover:text-yellow-400">RTI</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Online Donation</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Proactive Disclosure</a></li>
+          </ul>
+        </div>
+
+        <!-- 2. Other Hospitals -->
+        <div>
+          <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+            Other Robin Hospitals
+          </h3>
+          <ul class="text-sm space-y-1">
+            <li><a href="#" class="hover:text-yellow-400">Thoubal</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Kaching</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Senapati</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Moreh</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Legal & Policies -->
+        <div>
+          <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+            Legal & Policies
+          </h3>
+          <ul class="text-sm space-y-1">
+            <li><a href="Terms&Conditions.html" class="hover:text-yellow-400">Terms & Conditions</a></li>
+            <li><a href="PatientGuidelines.html" class="hover:text-yellow-400">Patient Guidelines</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 4. About / Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold text-lg border-b-2 border-yellow-500 inline-block mb-3">
+            Quick Links
+          </h3>
+          <ul class="text-sm space-y-1">
+            <li><a href="AboutUs.html" class="hover:text-yellow-400">About Us</a></li>
+            <li><a href="Departments&Centers.html" class="hover:text-yellow-400">Departments</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Doctors</a></li>
+            <li><a href="contactUs.html" class="hover:text-yellow-400">Contact Us</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr class=" m-4 border-pink-500 border-t-3 w-[70%] mx-auto p-2">
+
+    <div class="border-t border-gray-500 text-center mt-2 pt-4 Py-1 text-sm text-gray-300">
+      <img src="Dr.logo4.jpg" alt="India logo" class="mx-auto mb-2 w-28  rounded-[100%]">
+
+      <div class="">
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-sky-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-blue-500"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <p>© 2025 Robin Care Hospital, Manipur</p>
+    </div>
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+    // Function to handle clicks and show modal feedback
+    function handleClick(title, body) {
+      const modal = document.getElementById('customModal');
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalBody').innerHTML = body;
+
+      modal.classList.remove('hidden', 'opacity-0');
+      modal.classList.add('flex', 'opacity-100');
+
+      // Animation effect
+      modal.querySelector('div').classList.remove('scale-95');
+      modal.querySelector('div').classList.add('scale-100');
+    }
+
+    // Function to hide the modal
+    function hideModal() {
+      const modal = document.getElementById('customModal');
+      // Reverse animation effect
+      modal.querySelector('div').classList.remove('scale-100');
+      modal.querySelector('div').classList.add('scale-95');
+
+      setTimeout(() => {
+        modal.classList.remove('flex', 'opacity-100');
+        modal.classList.add('hidden', 'opacity-0');
+      }, 300);
+    }
+
+    // Function to close modal when clicking outside
+    function closeModal(event) {
+      if (event.target.id === 'customModal') {
+        hideModal();
+      }
+    }
+  </script>
+
+</body>
+
+</html>
